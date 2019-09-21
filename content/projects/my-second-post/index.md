@@ -1,7 +1,8 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+title: Tuple
+date: "2019-02"
 cover_image: "./salty_egg.jpg"
+tags: Branding, Web design
 ---
 
 Wow! I love blogging so much already.

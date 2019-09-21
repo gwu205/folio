@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./index.module.css"
+import styles from "./index.module.scss"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -33,16 +33,16 @@ class BlogIndex extends React.Component {
                   >
                       {title}
                   </h3>
-                  <small>{node.frontmatter.date}</small>
+                  <small>{node.frontmatter.tags}</small>
                 </header>
               </Link>
-              <section>
+              {/* <section>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-              </section>
+              </section> */}
             </article>
           )
         })}
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            tags
             cover_image {
               publicURL
               childImageSharp {

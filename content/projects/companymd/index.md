@@ -1,8 +1,9 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
-cover_image: "./salty_egg.jpg"
+title: CompanyMD
+date: "2019-09"
+description: "Let financial data lead the way - a financial management app prototype developed for stock investors and business analysts"
+cover_image: "./cover.jpg"
+tags: Front-end, UI design
 ---
 
 This is my first post on my new fake blog! How exciting!
