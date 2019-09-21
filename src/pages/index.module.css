@@ -1,13 +1,13 @@
-main.index {
+.index main {
     display: flex;
     flex-wrap: wrap;
 }
 
-main.index > article {
+.index main > article {
     padding: 10px;
     width: 33.33%;
 }
 
-main.index > article h3 {
+.index main > article h3 {
     margin-top: 1.2rem;
 }
