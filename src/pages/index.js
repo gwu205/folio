@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
+import styles from "./index.module.css"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -20,18 +22,19 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Img fluid={node.frontmatter.cover_image.childImageSharp.fluid} style={{height: '200px'}} />
+                <header>  
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                      {title}
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+              </Link>
               <section>
                 <p
                   dangerouslySetInnerHTML={{
@@ -64,9 +67,16 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             description
+            cover_image {
+              publicURL
+              childImageSharp {
+                fluid {
+                  srcSet
+                }
+              }
+            }
           }
         }
       }
