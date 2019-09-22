@@ -32,7 +32,9 @@ const Bio = () => {
         siteMetadata {
           author
           social {
-            twitter
+            mail
+            instagram
+            linkedin
           }
         }
       }
@@ -64,7 +66,7 @@ const Bio = () => {
       <p>
         <strong>Hi! I'm Geoff</strong> - a designer and developer building awesome product experiences.<br />Like what you see?
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={`mailto:${social.mail}`} target="_blank" rel="noopener noreferrer">
           Let's work together!
         </a>
       </p>

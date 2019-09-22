@@ -74,10 +74,8 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer style={{fontSize: rhythm(1/2), textAlign: "center", opacity: 0.5}}>
+          Copyright © {new Date().getFullYear()} Geoffrey Wu
         </footer>
       </div>
     )

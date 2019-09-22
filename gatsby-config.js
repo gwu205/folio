@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Connecting design & code`,
+    title: `Connecting design & code | Geoffrey Wu`,
     author: `Geoffrey Wu`,
     description: `A designer and developer creating awesome product experiences`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      mail: `gwu20510@gmail.com`,
+      instagram: 'gwu205',
+      linkedin: 'geoffrey-wu',
+      github: 'gwu205',
     },
   },
   plugins: [
