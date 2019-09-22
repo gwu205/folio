@@ -1,54 +1,66 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, logo } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
+        <Link
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+            backgroundImage: 'none',
           }}
+          to={`/`}
         >
-          <Link
+          <Img
+            fixed={logo}
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              maxWidth: 80,
+              maxHeight: 80,
+              borderRadius: `100%`,
             }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+            imgStyle={{
+              borderRadius: `50%`,
+            }}
+          />
+        </Link>
       )
     } else {
       header = (
-        <h3
+        <Link
           style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+            backgroundImage: 'none',
           }}
+          to={`/`}
         >
-          <Link
+          <Img
+            fixed={logo}
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              marginRight: rhythm(1 / 2),
+              marginBottom: 0,
+              maxWidth: 50,
+              maxHeight: 50,
+              borderRadius: `100%`,
             }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+            imgStyle={{
+              borderRadius: `50%`,
+            }}
+          />
+        </Link>
       )
     }
     return (

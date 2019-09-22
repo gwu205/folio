@@ -21,6 +21,13 @@ const Bio = () => {
           }
         }
       }
+      logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       site {
         siteMetadata {
           author
@@ -55,11 +62,10 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        <strong>Hi! I'm Geoff</strong> - a designer and developer building awesome product experiences.<br />Like what you see?
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Let's work together!
         </a>
       </p>
     </div>

@@ -13,12 +13,13 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const logo = data.logo.childImageSharp.fixed
 
     return (
       <div className={styles.index}>
-        <Layout location={this.props.location} title={siteTitle}>
+        <Layout location={this.props.location} title={siteTitle} logo={logo}>
         <SEO title="Geoffrey Wu" />
-        <Bio />
+        
         <h1 style={{width: '100%'}}>Projects</h1>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -52,6 +53,8 @@ class BlogIndex extends React.Component {
             </article>
           )
         })}
+
+        <Bio />
       </Layout>
       </div>
     )
@@ -65,6 +68,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
+      childImageSharp {
+        fixed(width: 80, height: 80) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

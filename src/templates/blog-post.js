@@ -12,6 +12,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const logo = this.props.data.logo.childImageSharp.fixed
 
     let projectLink
     if (post.frontmatter.link) {
@@ -24,7 +25,7 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} logo={logo}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -91,6 +92,13 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+      }
+    }
+    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
