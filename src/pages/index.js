@@ -25,7 +25,12 @@ class BlogIndex extends React.Component {
           return (
             <article key={node.fields.slug}>
               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                <Img fluid={node.frontmatter.cover_image.childImageSharp.fluid} style={{height: '200px'}} />
+                <Img 
+                  fluid={node.frontmatter.cover_image.childImageSharp.fluid} 
+                  style={{
+                    minHeight: 200,
+                  }}
+                />
                 <header>  
                   <h3
                     style={{

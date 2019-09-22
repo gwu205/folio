@@ -1,0 +1,14 @@
+.button {
+    display: block;
+    width: fit-content;
+    font-family: 'Varela Round',sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    padding: 8px 0;
+    transition: all 0.25s ease-in;
+
+    &:hover {
+        padding-left: 8px;
+    }
+}

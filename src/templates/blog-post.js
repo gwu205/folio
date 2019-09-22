@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styles from "./blog-post.module.scss"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -11,6 +12,16 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+
+    let projectLink
+    if (post.frontmatter.link) {
+      projectLink = 
+      <a href={post.frontmatter.link} className={styles.button} style={{marginBottom: rhythm(1)}} target="_blank" rel="noopener noreferrer" title="Go to live project">
+        View Project
+      </a>
+    } else {
+      projectLink = null
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -28,16 +39,8 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h1>
-            {/* <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p> */}
           </header>
+          {projectLink}
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -98,6 +101,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        link
       }
     }
   }

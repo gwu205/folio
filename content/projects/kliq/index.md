@@ -3,7 +3,7 @@ title: Kliq
 date: "2019-03"
 description: "Complete branding package for a member community service"
 cover_image: "./application.jpg"
-tags: Branding, Web design
+tags: Branding, UI design
 ---
 ![Kliq App](./deck.jpg)
 
