@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       mail: `gwu20510@gmail.com`,
-      instagram: 'gwu205',
+      instagram: 'geoff.wu',
       linkedin: 'geoffrey-wu',
       github: 'gwu205',
     },

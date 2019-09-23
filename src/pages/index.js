@@ -12,13 +12,16 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+    const linkedin = data.site.siteMetadata.social.linkedin
+    const github = data.site.siteMetadata.social.github
+    const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
     const logo = data.logo.childImageSharp.fixed
 
     return (
       <div className={styles.index}>
-        <Layout location={this.props.location} title={siteTitle} logo={logo}>
-        <SEO title="Geoffrey Wu" />
+        <Layout location={this.props.location} title={siteTitle} logo={logo} linkedin={linkedin} github={github} instagram={instagram}>
+        <SEO title="Digital Designer / Web Developer" />
         
         <h1 style={{width: '100%'}}>Projects</h1>
         {posts.map(({ node }) => {
@@ -68,6 +71,12 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+          mail
+          instagram
+          linkedin
+          github
+        }
       }
     }
     logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
