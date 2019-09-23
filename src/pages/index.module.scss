@@ -10,6 +10,10 @@ body {
     flex-wrap: wrap;
     padding: 30px 0 60px 0;
     transform: rotate(-5deg);
+
+    .projects {
+        background: pink;
+    }
     
     & > article {
         padding: 10px;

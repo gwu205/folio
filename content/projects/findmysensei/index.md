@@ -4,6 +4,7 @@ date: "2019-01"
 description: A marketplace app designed to connect students with teachers in the local area
 cover_image: "./home.png"
 tags: Front-end, UI design
+link: http://stmatch.herokuapp.com
 ---
 
 A marketplace app designed to connect students with teachers in the local area.

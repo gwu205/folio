@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
         <Layout location={this.props.location} title={siteTitle} logo={logo} linkedin={linkedin} github={github} instagram={instagram}>
         <SEO title="Digital Designer / Web Developer" />
         
-        <h1 style={{width: '100%'}}>Projects</h1>
+        <h1 className={styles.projects} style={{width: '100%'}}>Projects</h1>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
