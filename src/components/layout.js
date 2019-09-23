@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import LogoGithub from 'react-ionicons/lib/LogoGithub'
+import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin'
+import LogoInstagram from 'react-ionicons/lib/LogoInstagram'
+import styles from './layout.module.scss'
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -12,7 +16,11 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <div>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignContent: 'center',
+        }}>
           <Link
             style={{
               boxShadow: `none`,
@@ -36,15 +44,19 @@ class Layout extends React.Component {
               }}
             />
           </Link>
-          <div>
-            <a href={`https://www.linkedin.com/in/${linkedin}/`} target="_blank" rel="noopener noreferrer">
-              linkedin
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+            <a className={styles.socials} href={`https://www.linkedin.com/in/${linkedin}/`} target="_blank" rel="noopener noreferrer">
+              <LogoLinkedin color="#444" />
             </a>
-            <a href={`https://github.com/${github}/`} target="_blank" rel="noopener noreferrer">
-              github
+            <a className={styles.socials} href={`https://github.com/${github}/`} target="_blank" rel="noopener noreferrer">
+              <LogoGithub color="#444" />
             </a>
-            <a href={`https://www.instagram.com/${instagram}/`} target="_blank" rel="noopener noreferrer">
-              instagram
+            <a className={styles.socials} href={`https://www.instagram.com/${instagram}/`} target="_blank" rel="noopener noreferrer">
+              <LogoInstagram color="#444" />
             </a>
           </div>
         </div>

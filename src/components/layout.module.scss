@@ -1,0 +1,7 @@
+.socials {
+    background-image: none;
+    padding: 0 8px;
+    opacity: 0.5;
+    transition: opacity 0.25s ease-in;
+    &:hover { opacity: 1; }
+}
