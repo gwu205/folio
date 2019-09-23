@@ -46,13 +46,6 @@ class BlogIndex extends React.Component {
                   <small>{node.frontmatter.tags}</small>
                 </header>
               </Link>
-              {/* <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section> */}
             </article>
           )
         })}
