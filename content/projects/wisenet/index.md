@@ -1,23 +1,23 @@
 ---
-title: Werk
-date: "2019-04"
-description: "Complete branding package for a member community service"
-cover_image: "./app.jpg"
-tags: Branding, Web design
-link: https://www.werk.community/
+title: Wisenet
+date: "2018-08"
+description: "Branding update and website overhaul for a software provider"
+cover_image: "./homepage.png"
+tags: Branding, Front-end
+link: https://www.wisenet.co/
 ---
 
-An exclusive member community championing female entrepreneurship in Sri Lanka.
-> ###Women Entrepreneurs Resource Kit is an online community designed to provide advice, resources and opportunities for women
+The leading management software for education providers in Australia.
+> ###Student success starts with Learning Relationship Management
 
-![Logo](./logo.jpg)
+![Wisenet Homepage](./homepage.png)
 
-Built on the [Kliq](https://www.kliq.app) platform, WERK is a community designed to connect professionals from a variety of fields together as mentors, coworkers, or friends. Users can talk to each other within their network from the newsfeed, organise meetups and events, or find work posted by potential employers. For this project, I designed the brand identity, logo, app mockups, and built the website using WordPress.
+I worked with Wisenet, a division of [AdaptIT](https://www.adaptit.co.za/homepage), to update and improve their branding across the board. This included the production of print media such as flyers and banners, videos and promotional media, product wireframes and mockups, a revision of their branding style, and most notably, a complete overhaul of their corporate website.
 
-![Website](./website.jpg)
+Introducing a new orange colour and new fonts to the identity, the aim was to refresh the brand from what was a fairly clinical and plain aesthetic. In order to better communicate to the target audience, I chose to use this complementary colour scheme and font "Nunito" to add contrast and a sense of dynamism.
 
-![App Newsfeed](./feed.jpg)
+The corporate site redesign, built on Hubspot CMS, proved to be the biggest challenge; consideration of efficient information architecture was the primary concern. With a wealth of information to display and features to introduce, we chose to break down the site into multiple sections. On the home page, the design is simplified to provide a broad overview of the company, support, and the product. Users can then navigate to other more detailed pages through the links or navigation bar. Likewise, on the pricing page, the primary view is condensed to a single-page view. Using Javascript and jQuery, different plans and product information is displayed depending on the user's selections. As before, the full product feature matrix can also be viewed by scrolling further down the page.
 
-![App Store Screen](./store.jpg)
+![Wisenet Pricing Page](./pricing.png)
 
-![App](./app.jpg)
+![Wisenet Feature Page](./feature.png)
