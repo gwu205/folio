@@ -71,9 +71,11 @@ class Layout extends React.Component {
             backgroundImage: 'none',
           }}
           to={`/`}
+          title="Return Home"
         >
           <Img
             fixed={logo}
+            className={styles.logo}
             style={{
               marginRight: rhythm(1 / 2),
               marginBottom: 0,

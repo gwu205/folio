@@ -5,3 +5,10 @@
     transition: opacity 0.25s ease-in;
     &:hover { opacity: 1; }
 }
+
+.logo {
+    transition: opacity 0.25s ease-in;
+    &:hover {
+        opacity: 0.75;
+    }
+}
