@@ -4,7 +4,7 @@ date: "2019-09"
 description: "Let financial data lead the way - a financial management app prototype developed for stock investors and business analysts"
 cover_image: "./cover.jpg"
 tags: Front-end, UI design
-link: https://www.companymd.world
+link: https://github.com/gwu205/rails-CompanyMD
 ---
 
 CompanyMD is a financial management solution designed for business analysts to keep track of company performance and stock market movements.
