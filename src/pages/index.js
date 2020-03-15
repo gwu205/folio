@@ -17,6 +17,7 @@ class BlogIndex extends React.Component {
     const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
     const logo = data.logo.childImageSharp.fixed
+    const selectedPosts = ["Ikura", "CompanyMD", "Kliq", "Tuple", "Wisenet", "Werk"]
 
     return (
       <div className={styles.index}>
@@ -26,28 +27,30 @@ class BlogIndex extends React.Component {
         <h1 className={styles.projects} style={{width: '100%'}}>Projects</h1>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                <Img 
-                  fluid={node.frontmatter.cover_image.childImageSharp.fluid} 
-                  style={{
-                    minHeight: 200,
-                  }}
-                />
-                <header>  
-                  <h3
+          if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
+            return (
+              <article key={node.fields.slug}>
+                <Link to={node.fields.slug}>
+                  <Img 
+                    fluid={node.frontmatter.cover_image.childImageSharp.fluid} 
                     style={{
-                      marginBottom: rhythm(1 / 4),
+                      minHeight: 200
                     }}
-                  >
-                      {title}
-                  </h3>
-                  <small>{node.frontmatter.tags}</small>
-                </header>
-              </Link>
-            </article>
-          )
+                  />
+                  <header>  
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                        {title}
+                    </h3>
+                    <small>{node.frontmatter.tags}</small>
+                  </header>
+                </Link>
+              </article>
+            )
+          }
         })}
 
         <Bio />

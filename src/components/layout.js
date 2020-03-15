@@ -6,11 +6,11 @@ import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin'
 import LogoInstagram from 'react-ionicons/lib/LogoInstagram'
 import styles from './layout.module.scss'
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children, logo, linkedin, github, instagram } = this.props
+    const { location, children, logo, linkedin, github, instagram } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 

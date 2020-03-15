@@ -4,7 +4,6 @@ date: "2019-03"
 description: "Complete branding package for a member community service"
 cover_image: "./application.jpg"
 tags: Branding, UI design
-link: https://www.kliq.app
 ---
 
 A messaging and networking solution developed for member-based organisations and education providers in Australia.
@@ -16,6 +15,7 @@ For this project, I was in charge of the creation of the brand identity complete
 
 The focus in this visual communication was to convey the brand as a refreshing, modern, and affordable solution with the ability to revolutionise the way in which the target audience views messaging. The brand logo consists of a clean, rounded typeface and a chatbox as the brandmark. The defining feature of the brand is the cool purple gradient hue, which seeks to separate it from the competition in the education software industry.
 
+In addition to this, I completed UI design work on the app's administrator console, working with the team's developers to implement designs using HTML and CSS.
 
 ![Application Console](./application.jpg)
 
