@@ -17,7 +17,7 @@ Joining the team after initial development had already begun, I undertook a comp
 
 ![Ikura Dashboard](./dashboard.jpg)
 
-After having defined core user journeys and main features, I narrowed down the product's value proposition to the follwing three outcomes to be satisfied:
+After having defined core user journeys and main features, I narrowed down the product's value proposition to the following three outcomes to be satisfied:
 
 - Provide a navigable database of all members, activities and ongoing projects in my company
 - Perform analysis to improve efficiency of all members in my workplace
