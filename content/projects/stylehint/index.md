@@ -1,7 +1,7 @@
 ---
 title: Stylehint
 date: "2020-04"
-description: Web application built for small-to-medium enterprise employee and cost management
+description: Design exercise to improve the UI of an exising mobile app
 cover_image: "./mockup.jpg"
 tags: Front-end, UI/UX design
 ---
@@ -64,10 +64,10 @@ Starting from rough sketches, I moved on to developing a mockup for only the mai
 I swapped out the bottom-fixed navigation with a hamburger menu to reduce elements that detract from the primary goal of "being inspired". In the menu, I combined the search and search by image into a single element, moved the promotional banner, as well as condensing popular hashtags under "Discover".
 
 <div style="display: flex; margin-bottom: 1em;">
-  <video autoplay loop style="width: 50%; height: auto">
+  <video autoplay loop muted style="width: 50%; height: auto">
     <source src="home.mp4" type="video/mp4">
   </video>
-  <video autoplay loop style="width: 50%; height: auto">
+  <video autoplay loop muted style="width: 50%; height: auto">
     <source src="menu.mp4" type="video/mp4">
   </video>
 </div>
