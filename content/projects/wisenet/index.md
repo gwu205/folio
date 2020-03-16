@@ -21,3 +21,7 @@ The corporate site redesign, built on Hubspot CMS, proved to be the biggest chal
 ![Wisenet Pricing Page](./pricing.png)
 
 ![Wisenet Feature Page](./feature.png)
+
+![Wisenet Timeline](./wisenetTimeline.jpg)
+
+![Wisenet Stand](./stand.jpg)

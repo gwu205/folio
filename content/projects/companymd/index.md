@@ -2,7 +2,7 @@
 title: CompanyMD
 date: "2019-09"
 description: "Let financial data lead the way - a financial management app prototype developed for stock investors and business analysts"
-cover_image: "./cover.jpg"
+cover_image: "./mockup.jpg"
 tags: Front-end, UI design
 link: https://github.com/gwu205/rails-CompanyMD
 ---
@@ -10,7 +10,7 @@ link: https://github.com/gwu205/rails-CompanyMD
 CompanyMD is a financial management solution designed for business analysts to keep track of company performance and stock market movements.
 > ###Let financial data lead the way
 
-![CompanyMD Application Dashboard](./dashboard.jpg)
+![CompanyMD Application Dashboard](./mockup.jpg)
 
 Built as part of a rapid prototyping exercise to create an app using Ruby on Rails, I worked with a team of developers to create CompanyMD; I was in charge of designing the interface and implementing the app’s front-end.
 
