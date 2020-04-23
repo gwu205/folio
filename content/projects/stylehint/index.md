@@ -2,8 +2,8 @@
 title: Stylehint
 date: "2020-04"
 description: Design exercise to improve the UI of an exising mobile app
-cover_image: "./mockup.jpg"
-tags: Front-end, UI/UX design
+cover_image: "./highlights.png"
+tags: UI/UX design
 ---
 
 ###### *The following is a design exercise with the aim of improving upon an existing product to better reach the target market. It covers research, analysis and design of a basic mockup to validate findings.*
