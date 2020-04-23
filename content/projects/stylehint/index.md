@@ -80,7 +80,7 @@ Another aspect I thought to improve was to present to the user more content from
 
 #### Cards
 
-With the cards, I decided to, primarily, make a greater emphasis on the community of the app through attaching usernames and profile photos to each outfit. From a user perspective, together with the attached tags, this allows for greater discoverability and the ability for users to create associations between what they are seeing and who it is coming from. Similarly, the section for "Recommended users" is moved to within the "Popular styles" feed; if User A sees User B pop up on her feed many times and then is specifically given a prompt to "follow User B", User A doesn't have to navigate away from what she is already looking at and the chance of this action succeeding is greatly increased.
+With the cards, I decided to, primarily, make a greater emphasis on the community of the app through attaching usernames and profile photos to each outfit. From a user perspective, together with the attached tags, this allows for greater discoverability and the ability for users to create associations between what they are seeing and who it is coming from. Similarly, the section for "Recommended users" is moved to within the "Popular styles" feed; if User A sees User B pop up on her feed many times and then is specifically given a prompt to "follow User B", User A doesn't have to navigate away from what she is already looking at and the chance of this action succeeding is greatly increased. Suggestions will continue loading dynamically so that the user doesn't have to navigate from what she is looking at.
 
 ![Redesigned cards](./follow.png)
 
