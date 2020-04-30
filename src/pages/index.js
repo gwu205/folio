@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
     const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
     const logo = data.logo.childImageSharp.fixed
-    const selectedPosts = ["Ikura", "CompanyMD", "Kliq", "Tuple", "Wisenet", "Werk"]
+    const selectedPosts = ["Stylehint", "Ikura", "CompanyMD", "Kliq", "Tuple", "Werk"]
 
     return (
       <div className={styles.index}>

@@ -1,22 +1,24 @@
 ---
 title: Stylehint
 date: "2020-04"
-description: Design exercise to improve the UI of an exising mobile app
-cover_image: "./highlights.png"
-tags: UI/UX design
+description: Improving the user interface and experience of an existing mobile app through research and analysis
+cover_image: "./cover.jpg"
+tags: Product design
 ---
 
 ###### *The following is a design exercise with the aim of improving upon an existing product to better reach the target market. It covers research, analysis and design of a basic mockup to validate findings.*
 
 ### The product
 
-> StyleHint is an app that helps you discover trends from around the world. 
-You can search for #westcoast, #usa, #uniqloxjwa, #uniqlo, #stylehintpartner, and more
-UNIQLO and GU store staff post their outfits everyday, so check out the latest looks and perennial styles you love.
+> ###<a href="https://apps.apple.com/jp/app/stylehint-%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%92%E3%83%B3%E3%83%88-%E7%9D%80%E3%81%93%E3%81%AA%E3%81%97%E7%99%BA%E8%A6%8B%E3%82%A2%E3%83%97%E3%83%AA/id1440248752" target="_blank">StyleHint</a> is an app that helps you discover trends from around the world. 
+
+<div style="display: flex; justify-content: center;">
+  <img src="stylehint.gif" alt="The original app" />
+</div>
 
 ### Outline
 
-Given the app, <a href="https://apps.apple.com/us/app/stylehint/id1440248752?mt=8" target="_blank">StyleHint</a>, I decided to approach the process of improving the UI design through the following steps:
+I undertook a design exercise to improve upon <a href="https://apps.apple.com/jp/app/stylehint-%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%92%E3%83%B3%E3%83%88-%E7%9D%80%E3%81%93%E3%81%AA%E3%81%97%E7%99%BA%E8%A6%8B%E3%82%A2%E3%83%97%E3%83%AA/id1440248752" target="_blank">StyleHint</a>, a lookbook app developed to connect and share users' outfits, and to also promote and advertise the products of Uniqlo and GU. I decided to approach the process of improving the UI design through the following steps:
 
 - **Understand**: Conduct some basic competitive research; identify and analyse what are useful features or approaches
 - **Define**: Construct statements to empathise and summarise what users primarily want out of this product
@@ -27,7 +29,7 @@ Given the app, <a href="https://apps.apple.com/us/app/stylehint/id1440248752?mt=
 ![I collected a number of different apps to understand what users need](./apps.jpg)
 To gain inspiration and a general understanding of the target market, I looked at the app and some products with similar core users. In particular, I sought to understand what are the primary features that keep users coming back, ultimately turning usage into learned habits, and how are these elements positioned in the layout.
 
-What I found is that for apps like *Instagram*, a strong competitor to StyleHint, and even with apps such as *Uber* or *Here Maps*, content is king. There's an overarching purpose for the product - I think navigation apps communicate this concept well. Users go to this app because they want to be told "This is how you get from point A to B". Upon opening the interface for the first time, you get the map, your location, and a search bar - the usage is clear and needs no explanation. There are other useful features if you navigate to the menu, but the main concern is answered from the outset.
+What I found is that for apps like *Instagram*, a strong competitor to StyleHint, and even with apps such as *Uber* or *Here Maps*, content is king. There's an overarching purpose for the product - I think navigation apps communicate this concept well. Users go to this app because they want to be told "This is how you get from point A to B". Upon opening the interface for the first time, users are presented with the map, their current location, and a search bar - the usage is clear and needs no explanation. There are other useful features if you navigate to the menu, but the main concern is answered from the outset.
 
 Similarly, *Instagram* tells users "This is what is going on within your community", the user's feed is at the forefront but also allows for discovery of content that is just outside of what he or she may be used to. This kind of variable reward is an important idea that keeps the user experience engaging and something I think is worth noting. Using this research and analysis, I progressed to defining the problems faced by the core market and possible solutions.
 
@@ -38,6 +40,8 @@ For the exercise, I decided to use a <a href="https://jtbd.info/2-what-is-jobs-t
 > The process a consumer goes through whenever she aims to change her existing life-situation into a preferred one, but cannot because there are constraints that stop her.
 
 ![Customers use products to design a 'new me'](./jtbd.jpeg)
+
+<small>Credit: Samuel Hulick, https://jtbd.info/2-what-is-jobs-to-be-done-jtbd-796b82081cca</small>
 
 First of all, I defined *the problem* and *the target audience* - who is using the app, what is their mission, their motivator for seeking out this product and what obstacles are there to acheiving this goal. Judging by the current app, the product description, and user reviews, I narrowed down the target audience as follows:
 
