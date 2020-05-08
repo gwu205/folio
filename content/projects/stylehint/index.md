@@ -1,6 +1,7 @@
 ---
 title: Stylehint
 date: "2020-04"
+interval: 5 days
 description: Improving the user interface and experience of an existing mobile app through research and analysis
 cover_image: "./cover.jpg"
 tags: Product design

@@ -1,6 +1,7 @@
 ---
 title: Ikura
 date: "2020-01"
+interval: 2 months
 description: Web application built for small-to-medium enterprise employee and cost management
 cover_image: "./mockup.jpg"
 tags: Front-end, UI/UX design

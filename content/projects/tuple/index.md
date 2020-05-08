@@ -1,6 +1,7 @@
 ---
 title: Tuple
 date: "2018-12"
+interval: 1 month
 cover_image: "./card.jpg"
 tags: Branding, Web design
 link: https://www.tuplesms.com/
