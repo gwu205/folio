@@ -1,6 +1,7 @@
 ---
 title: CompanyMD
 date: "2019-09"
+interval: 2 weeks
 description: "Let financial data lead the way - a financial management app prototype developed for stock investors and business analysts"
 cover_image: "./mockup.jpg"
 tags: Front-end, UI design

@@ -1,6 +1,7 @@
 ---
 title: FindMySensei
 date: "2019-01"
+interval: 5 days
 description: A marketplace app designed to connect students with teachers in the local area
 cover_image: "./home.png"
 tags: Front-end, UI design
