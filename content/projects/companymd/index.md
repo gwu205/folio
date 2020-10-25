@@ -8,6 +8,8 @@ tags: Front-end, UI design
 link: https://github.com/gwu205/rails-CompanyMD
 ---
 
+###### *This project is a rapid web app prototyping exercise as part of Le Wagon's coding bootcamp curriculum.*
+
 CompanyMD is a financial management solution designed for business analysts to keep track of company performance and stock market movements.
 > ###Let financial data lead the way
 
