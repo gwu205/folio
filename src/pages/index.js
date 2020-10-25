@@ -51,8 +51,8 @@ class BlogIndex extends React.Component {
               </article>
             )
           }
+          return null;
         })}
-
         <Bio />
       </Layout>
       </div>

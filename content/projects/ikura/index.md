@@ -7,7 +7,9 @@ cover_image: "./mockup.jpg"
 tags: Front-end, UI/UX design
 ---
 
-B2B web-based application built for small-to-medium enterprise employee and cost management
+###### *The following documentation covers the design process that went into developing a MVP Ruby on Rails web app over the course of a few months.*
+
+A B2B web-based application built for small-to-medium enterprise employee and cost management.
 > ###Get your team working better, together.
 
 As a member of [DG Takano](https://www.dgtakano.co.jp/), I worked as the lead UI/UX designer on the development team, creating the app layout and architecture as well as implementing designs using HTML, CSS, and JavaScript. This particular project involved developing a web app using Ruby on Rails.

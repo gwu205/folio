@@ -31,12 +31,24 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
+        <h3
+          style={{
+            display: `block`,
+            textAlign: `right`,
+            fontSize: `0.7rem`,
+            margin: `0.5rem 0`,
+            textTransform: `uppercase`,
+            letterSpacing: `0.1rem`
+          }}
+        >
+          {post.frontmatter.date}
+        </h3>
           <header style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-            }}
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+          }}
           >
             <h1
               style={{
@@ -47,11 +59,11 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.title}
             </h1>
             <small style={{
-                textAlign: 'center',
-                paddingLeft: '1em',
-                fontStyle: 'italic',
-                whiteSpace: 'pre-wrap',
-              }}
+              textAlign: 'center',
+              paddingLeft: '1em',
+              fontStyle: 'italic',
+              whiteSpace: 'pre-wrap',
+            }}
             >
               {"Interval:\n" + post.frontmatter.interval}
             </small>
@@ -122,7 +134,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM YYYY")
         interval
         description
         link
