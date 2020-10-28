@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Connecting design & code | Geoffrey Wu`,
+    title: `UI/UX Designer based in Tokyo`,
     author: `Geoffrey Wu`,
     description: `A designer and developer creating awesome product experiences`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://geoffreywu.digital/`,
     social: {
       mail: `gwu20510@gmail.com`,
       instagram: 'geoff.wu',
