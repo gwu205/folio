@@ -1,14 +1,15 @@
 ---
 title: FindMySensei
-date: "2019-01"
+date: "2019-08"
 interval: 5 days
 description: A marketplace app designed to connect students with teachers in the local area
 cover_image: "./home.png"
 tags: Front-end, UI design
-link: http://stmatch.herokuapp.com
 ---
 
-A marketplace app designed to connect students with teachers in the local area.
+###### *A rapid prototyping exercise as part of Le Wagon's 9-week Ruby on Rails programming bootcamp curriculum*
+
+FindMySensei is a marketplace app designed to connect students with teachers in the local area.
 > ###Learn, Share, Connect
 
 For this project I worked with a small team of developers over a period of five days to develop this app using Ruby on Rails. I was in charge of designing and developing the app's front-end.

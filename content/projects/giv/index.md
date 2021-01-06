@@ -16,7 +16,7 @@ link: https://giv.link/
 
 _Giv_ is a matching application that aims to facilitate and promote a service-based commerce system that relies on gratitude and the goodwill of others rather than anything of monetary value. Using the _Giv_ platform, users can sign up and talk to other members to organise an exchange of services (or goods). 
 
-Currently growing a user base in Japan exclusively, a professional stylist could use the platorm to exchange their trade - hairdressing - in return for a locally-grown bag of rice and other fresh produce from someone who's a farmer by trade, as one of the many example scenarios made possible by the service.
+Currently growing a user base in Japan exclusively, a professional stylist could use the platform to exchange their trade - hairdressing - in return for a locally-grown bag of rice and other fresh produce from someone who's a farmer by trade, as one of the many example scenarios made possible by the service.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CNx6CsvxJ3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

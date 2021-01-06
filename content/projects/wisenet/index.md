@@ -1,6 +1,6 @@
 ---
 title: Wisenet
-date: "2018-08"
+date: "2018-06"
 interval: 1 year
 description: "Branding update and website overhaul for a software provider"
 cover_image: "./homepage.png"
