@@ -62,9 +62,12 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        <strong>Hi! I'm Geoff</strong> - a designer and developer building awesome product experiences.<br />Like what you see?
-        {` `}
+      <p
+        style={{
+          marginBottom: 0
+        }}
+      >
+        <strong>Hi! I'm Geoff</strong> - a UI/UX designer building awesome product experiences.<br />Like what you see?&nbsp;
         <a href={`mailto:${social.mail}`} target="_blank" rel="noopener noreferrer">
           Let's work together!
         </a>

@@ -1,7 +1,7 @@
 ---
 title: Ikura
 date: "2020-01"
-interval: 2 months
+interval: 3 months
 description: Web application built for small-to-medium enterprise employee and cost management
 cover_image: "./mockup.jpg"
 tags: Front-end, UI/UX design
@@ -12,7 +12,7 @@ tags: Front-end, UI/UX design
 A B2B web-based application built for small-to-medium enterprise employee and cost management.
 > ###Get your team working better, together.
 
-As a member of [DG Takano](https://www.dgtakano.co.jp/), I worked as the lead UI/UX designer on the development team, creating the app layout and architecture as well as implementing designs using HTML, CSS, and JavaScript. This particular project involved developing a web app using Ruby on Rails.
+As a member of [DG Takano](https://www.dgtakano.co.jp/), I worked as the sole UI/UX designer on the development team, creating the app layout and architecture as well as implementing designs using HTML, CSS, and JavaScript. This particular project involved developing a web app using Ruby on Rails.
 
 Joining the team after initial development had already begun, I undertook a complete user experience audit to analyse and dissect the primary target audience and purposes for using the app. Using this knowledge, I planned, designed, and executed a complete redesign of the app to better satisfy user needs.
 

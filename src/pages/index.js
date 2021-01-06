@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
     return (
       <div className={styles.index}>
         <Layout location={this.props.location} title={siteTitle} logo={logo} linkedin={linkedin} github={github} instagram={instagram}>
-        <SEO title="Digital Designer / Web Developer" />
+        <SEO title="UI/UX Product Designer in Tokyo" />
         
         <h1 className={styles.projects} style={{width: '100%'}}>Projects</h1>
         {posts.map(({ node }) => {

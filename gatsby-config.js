@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `UI/UX Designer based in Tokyo`,
     author: `Geoffrey Wu`,
-    description: `A designer and developer creating awesome product experiences`,
+    description: `Multidisciplinary designer creating awesome product experiences`,
     siteUrl: `https://geoffreywu.digital/`,
     social: {
       mail: `gwu20510@gmail.com`,

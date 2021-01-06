@@ -1,6 +1,6 @@
 ---
 title: Kliq
-date: "2019-04"
+date: "2019-02"
 interval: 2 months
 description: "Complete branding package for a member community service"
 cover_image: "./application.jpg"
