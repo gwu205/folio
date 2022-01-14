@@ -7,11 +7,11 @@ cover_image: "./cover.jpg"
 tags: UX, Product design
 ---
 
-###### *The following is a design exercise with the aim of improving upon an existing product to better reach the target market. It covers research, analysis and design of a basic mockup to validate findings.*
+###### _The following is a design exercise with the aim of improving upon an existing product to better reach the target market. It covers research, analysis and design of a basic mockup to validate findings._
 
 ### The product
 
-> ###<a href="https://apps.apple.com/jp/app/stylehint-%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%92%E3%83%B3%E3%83%88-%E7%9D%80%E3%81%93%E3%81%AA%E3%81%97%E7%99%BA%E8%A6%8B%E3%82%A2%E3%83%97%E3%83%AA/id1440248752" target="_blank">StyleHint</a> is an app that helps you discover trends from around the world. 
+> ### <a href="https://apps.apple.com/jp/app/stylehint-%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%92%E3%83%B3%E3%83%88-%E7%9D%80%E3%81%93%E3%81%AA%E3%81%97%E7%99%BA%E8%A6%8B%E3%82%A2%E3%83%97%E3%83%AA/id1440248752" target="_blank">StyleHint</a> is an app that helps you discover trends from around the world.
 
 <div style="display: flex; justify-content: center;">
   <img src="stylehint.gif" alt="The original app" />
@@ -28,11 +28,12 @@ I undertook a design exercise to improve upon <a href="https://apps.apple.com/jp
 ### Understand
 
 ![I collected a number of different apps to understand what users need](./apps.jpg)
+
 To gain inspiration and a general understanding of the target market, I looked at the app and some products with similar core users. In particular, I sought to understand what are the primary features that keep users coming back, ultimately turning usage into learned habits, and how are these elements positioned in the layout.
 
-What I found is that for apps like *Instagram*, a strong competitor to StyleHint, and even with apps such as *Uber* or *Here Maps*, content is king. There's an overarching purpose for the product - I think navigation apps communicate this concept well. Users go to this app because they want to be told "This is how you get from point A to B". Upon opening the interface for the first time, users are presented with the map, their current location, and a search bar - the usage is clear and needs no explanation. There are other useful features if you navigate to the menu, but the main concern is answered from the outset.
+What I found is that for apps like _Instagram_, a strong competitor to StyleHint, and even with apps such as _Uber_ or _Here Maps_, content is king. There's an overarching purpose for the product - I think navigation apps communicate this concept well. Users go to this app because they want to be told "This is how you get from point A to B". Upon opening the interface for the first time, users are presented with the map, their current location, and a search bar - the usage is clear and needs no explanation. There are other useful features if you navigate to the menu, but the main concern is answered from the outset.
 
-Similarly, *Instagram* tells users "This is what is going on within your community", the user's feed is at the forefront but also allows for discovery of content that is just outside of what he or she may be used to. This kind of variable reward is an important idea that keeps the user experience engaging and something I think is worth noting. Using this research and analysis, I progressed to defining the problems faced by the core market and possible solutions.
+Similarly, _Instagram_ tells users "This is what is going on within your community", the user's feed is at the forefront but also allows for discovery of content that is just outside of what he or she may be used to. This kind of variable reward is an important idea that keeps the user experience engaging and something I think is worth noting. Using this research and analysis, I progressed to defining the problems faced by the core market and possible solutions.
 
 ### Define
 
@@ -44,7 +45,7 @@ For the exercise, I decided to use a <a href="https://jtbd.info/2-what-is-jobs-t
 
 <small>Credit: Samuel Hulick, https://jtbd.info/2-what-is-jobs-to-be-done-jtbd-796b82081cca</small>
 
-First of all, I defined *the problem* and *the target audience* - who is using the app, what is their mission, their motivator for seeking out this product and what obstacles are there to acheiving this goal. Judging by the current app, the product description, and user reviews, I narrowed down the target audience as follows:
+First of all, I defined _the problem_ and _the target audience_ - who is using the app, what is their mission, their motivator for seeking out this product and what obstacles are there to acheiving this goal. Judging by the current app, the product description, and user reviews, I narrowed down the target audience as follows:
 
 **The typical user would be someone with low-to-medium disposable income; they would be someone who is young, aged between 14 - 36, fashion-conscious and takes great pride in their appearance. The user would most likely have some interest in the UNIQLO/GU brand and would associate themselves with a simple, yet elegant appearance.**
 
@@ -52,7 +53,7 @@ Then, I sought to define what are the major pain points for this type of user an
 
 **Picking outfits and keeping up with trends is time-consuming and inefficient. I want to discover new outfit ideas to inspire myself and also expand my collections by easily finding out what any given model is wearing and where to purchase it.**
 
-From this foundation, I built a basic profile of the average user and what is important to them. As I'm looking to improve upon an existing product, I decided to take this further and define a number of Jobs - the type of outcomes that will make the user better. Products are made to sell *something*, but they should also offer an experience, idea, or solution - one that not only satifies an intermediary goal but also the end goal and a core need. As once observed by Harvard Business School Professor Theodore Levitt: “People don’t want to buy a quarter-inch drill. They want a quarter-inch hole".
+From this foundation, I built a basic profile of the average user and what is important to them. As I'm looking to improve upon an existing product, I decided to take this further and define a number of Jobs - the type of outcomes that will make the user better. Products are made to sell _something_, but they should also offer an experience, idea, or solution - one that not only satifies an intermediary goal but also the end goal and a core need. As once observed by Harvard Business School Professor Theodore Levitt: “People don’t want to buy a quarter-inch drill. They want a quarter-inch hole".
 
 So what Jobs should this product Do? I defined three outcomes that should be fulfilled and used them as the basis for my analysis. The Jobs to be Done are:
 

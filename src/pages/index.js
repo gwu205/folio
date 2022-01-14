@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./index.module.scss"
+import { index, projects } from "./index.module.scss"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -16,7 +16,6 @@ class BlogIndex extends React.Component {
     const github = data.site.siteMetadata.social.github
     const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
-    // const logo = data.logo.childImageSharp.fixed
     const selectedPosts = [
       "Stylehint",
       "Ikura",
@@ -27,7 +26,7 @@ class BlogIndex extends React.Component {
     ]
 
     return (
-      <div className={styles.index}>
+      <div className={index}>
         <Layout
           location={this.props.location}
           title={siteTitle}
@@ -38,7 +37,7 @@ class BlogIndex extends React.Component {
         >
           <SEO title="Works" />
 
-          <h1 className={styles.projects} style={{ width: "100%" }}>
+          <h1 className={projects} style={{ width: "100%" }}>
             Digital Designer
           </h1>
           {posts.map(({ node }) => {
@@ -88,13 +87,6 @@ export const pageQuery = graphql`
           instagram
           linkedin
           github
-        }
-      }
-    }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
         }
       }
     }
