@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styles from "./index.module.scss"
+import { index, list } from "./index.module.scss"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -19,7 +18,7 @@ class BlogIndex extends React.Component {
     const logo = data.logo.childImageSharp.fixed
 
     return (
-      <div className={styles.index}>
+      <div className={index}>
         <Layout
           location={this.props.location}
           title={siteTitle}
@@ -42,7 +41,7 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article className={styles.list} key={node.fields.slug}>
+              <article className={list} key={node.fields.slug}>
                 <header>
                   <Link to={node.fields.slug}>
                     <h3

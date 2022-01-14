@@ -111,23 +111,15 @@ class Layout extends React.Component {
     //   )
     // }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(28),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <Header />
-        {/* <header>{header}</header> */}
+      <>
+        <Header location={this.props.location} />
         <main>{children}</main>
         <footer
           style={{ fontSize: rhythm(1 / 2), textAlign: "center", opacity: 0.5 }}
         >
           Copyright © {new Date().getFullYear()} Geoffrey Wu
         </footer>
-      </div>
+      </>
     )
   }
 }

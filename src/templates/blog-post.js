@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import styles from "./blog-post.module.scss"
+import { button } from "./blog-post.module.scss"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -16,10 +16,18 @@ class BlogPostTemplate extends React.Component {
 
     let projectLink
     if (post.frontmatter.link) {
-      projectLink = 
-      <a href={post.frontmatter.link} className={styles.button} style={{marginBottom: rhythm(1)}} target="_blank" rel="noopener noreferrer" title="Go to live project">
-        View Project
-      </a>
+      projectLink = (
+        <a
+          href={post.frontmatter.link}
+          className={button}
+          style={{ marginBottom: rhythm(1) }}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Go to live project"
+        >
+          View Project
+        </a>
+      )
     } else {
       projectLink = null
     }
@@ -31,24 +39,25 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-        <h3
-          style={{
-            display: `block`,
-            textAlign: `right`,
-            fontSize: `0.7rem`,
-            margin: `0.5rem 0`,
-            textTransform: `uppercase`,
-            letterSpacing: `0.1rem`
-          }}
-        >
-          {post.frontmatter.date}
-        </h3>
-          <header style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            width: '100%',
-          }}
+          <h3
+            style={{
+              display: `block`,
+              textAlign: `right`,
+              fontSize: `0.7rem`,
+              margin: `0.5rem 0`,
+              textTransform: `uppercase`,
+              letterSpacing: `0.1rem`,
+            }}
+          >
+            {post.frontmatter.date}
+          </h3>
+          <header
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
           >
             <h1
               style={{
@@ -58,12 +67,13 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.title}
             </h1>
-            <small style={{
-              textAlign: 'center',
-              paddingLeft: '1em',
-              fontStyle: 'italic',
-              whiteSpace: 'pre-wrap',
-            }}
+            <small
+              style={{
+                textAlign: "center",
+                paddingLeft: "1em",
+                fontStyle: "italic",
+                whiteSpace: "pre-wrap",
+              }}
             >
               {"Interval:\n" + post.frontmatter.interval}
             </small>
@@ -89,7 +99,7 @@ class BlogPostTemplate extends React.Component {
               listStyle: `none`,
               padding: 0,
               marginLeft: 0,
-              marginBottom: 0
+              marginBottom: 0,
             }}
           >
             <li>

@@ -33,7 +33,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1008,
+              // TODO: update with blog body width
+              maxWidth: 1280,
+              withWebp: true,
+              quality: 100,
             },
           },
           {
@@ -48,6 +51,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -56,7 +60,6 @@ module.exports = {
         trackingId: "UA-148436785-1",
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

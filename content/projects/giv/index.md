@@ -10,11 +10,11 @@ link: https://giv.link/
 
 ![Giv banner image](./feature-graphic.jpg)
 
-###### *I was approached by the client to redesign the Giv product website and implement the design for a cleaner, refreshing look to better resonate with the user base.*
+###### _I was approached by the client to redesign the Giv product website and implement the design for a cleaner, refreshing look to better resonate with the user base._
 
 ### Project outline
 
-_Giv_ is a matching application that aims to facilitate and promote a service-based commerce system that relies on gratitude and the goodwill of others rather than anything of monetary value. Using the _Giv_ platform, users can sign up and talk to other members to organise an exchange of services (or goods). 
+_Giv_ is a matching application that aims to facilitate and promote a service-based commerce system that relies on gratitude and the goodwill of others rather than anything of monetary value. Using the _Giv_ platform, users can sign up and talk to other members to organise an exchange of services (or goods).
 
 Currently growing a user base in Japan exclusively, a professional stylist could use the platform to exchange their trade - hairdressing - in return for a locally-grown bag of rice and other fresh produce from someone who's a farmer by trade, as one of the many example scenarios made possible by the service.
 

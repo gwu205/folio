@@ -1,76 +1,45 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-// import LogoGithub from "react-ionicons/lib/LogoGithub"
-// import LogoLinkedin from "react-ionicons/lib/LogoLinkedin"
-// import LogoInstagram from "react-ionicons/lib/LogoInstagram"
-// import styles from "./layout.module.scss"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { container, logo, navigation, active } from "./header.module.scss"
 
-import { rhythm } from "../utils/typography"
-
-const Header = () => {
+const Header = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
 
   return (
-    <StaticQuery
-      query={graphql`
-        query logo {
-          logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-            childImageSharp {
-              fixed(width: 80, height: 80) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <header
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignContent: "center",
-          }}
+    <header className={container}>
+      <Link to={`/`}>
+        <StaticImage
+          src="../images/logo.png"
+          alt="Logo"
+          width={160}
+          height={160}
+          placeholder="none"
+          className={logo}
+        />
+      </Link>
+      <nav className={navigation}>
+        <Link
+          className={location.pathname === rootPath && active}
+          to={rootPath}
         >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-              backgroundImage: "none",
-            }}
-            to={`/`}
-          >
-            <Img
-              fixed={data.logo.childImageSharp.fixed}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                maxWidth: 80,
-                maxHeight: 80,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-          </Link>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <Link to={rootPath}>Works</Link>
-            <Link to={`/about`}>About</Link>
-            <Link to={`/journal`}>Journal</Link>
-            <Link to={`/`}>Contact</Link>
-          </div>
-        </header>
-      )}
-    />
+          Works
+        </Link>
+        <Link
+          className={location.pathname === "/about" && active}
+          to={`/about`}
+        >
+          About
+        </Link>
+        <Link
+          className={location.pathname === "/journal" && active}
+          to={`/journal`}
+        >
+          Journal
+        </Link>
+        <Link to={`/`}>Contact</Link>
+      </nav>
+    </header>
   )
 }
 
