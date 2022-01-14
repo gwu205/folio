@@ -1,3 +1,3 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "@fontsource/urbanist/400.css"
+import "@fontsource/urbanist/700.css"
