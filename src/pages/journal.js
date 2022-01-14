@@ -16,59 +16,59 @@ class BlogIndex extends React.Component {
     const github = data.site.siteMetadata.social.github
     const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
-    // const logo = data.logo.childImageSharp.fixed
-    const selectedPosts = [
-      "Stylehint",
-      "Ikura",
-      "CompanyMD",
-      "Kliq",
-      "Tuple",
-      "Giv",
-    ]
+    const logo = data.logo.childImageSharp.fixed
 
     return (
       <div className={styles.index}>
         <Layout
           location={this.props.location}
           title={siteTitle}
-          // logo={logo}
+          logo={logo}
           linkedin={linkedin}
           github={github}
           instagram={instagram}
         >
-          <SEO title="Works" />
+          <SEO title="UI/UX Product Designer in Tokyo" />
 
-          <h1 className={styles.projects} style={{ width: "100%" }}>
-            Digital Designer
+          <h1
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            All projects
           </h1>
+
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
-            if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
-              return (
-                <article key={node.fields.slug}>
+            return (
+              <article className={styles.list} key={node.fields.slug}>
+                <header>
                   <Link to={node.fields.slug}>
-                    <Img
-                      fluid={node.frontmatter.cover_image.childImageSharp.fluid}
+                    <h3
                       style={{
-                        minHeight: 200,
+                        marginBottom: rhythm(1 / 4),
                       }}
-                    />
-                    <header>
-                      <h3
-                        style={{
-                          marginBottom: rhythm(1 / 4),
-                        }}
-                      >
-                        {title}
-                      </h3>
-                      <small>{node.frontmatter.tags}</small>
-                    </header>
+                    >
+                      {title}
+                    </h3>
                   </Link>
-                </article>
-              )
-            }
-            return null
+                  <small>{node.frontmatter.tags}</small>
+                </header>
+              </article>
+            )
           })}
+          <small
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            <a href="https://tinyurl.com/gwu205cv" target="_blank">
+              My full work history and professional skills are displayed on my
+              CV
+            </a>
+          </small>
           <Bio />
         </Layout>
       </div>
