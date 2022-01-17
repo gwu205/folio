@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
     const github = data.site.siteMetadata.social.github
     const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
-    const logo = data.logo.childImageSharp.fixed
+    const logo = data.logo.childImageSharp.gatsbyImageData
 
     return (
       <div className={index}>
@@ -77,48 +77,43 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        social {
-          mail
-          instagram
-          linkedin
-          github
-        }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      social {
+        mail
+        instagram
+        linkedin
+        github
       }
     }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+  }
+  logo: file(absolutePath: {regex: "/gwlogo.png/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 80, height: 80, layout: FIXED)
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-            tags
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid {
-                  srcSet
-                }
-              }
+  }
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          description
+          tags
+          cover_image {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
         }
       }
     }
   }
+}
 `
