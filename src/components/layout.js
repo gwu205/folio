@@ -1,10 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Header from "./header"
-import LogoGithub from "react-ionicons/lib/LogoGithub"
-import LogoLinkedin from "react-ionicons/lib/LogoLinkedin"
-import LogoInstagram from "react-ionicons/lib/LogoInstagram"
+import Footer from "./footer"
 import styles from "./layout.module.scss"
 
 import { rhythm } from "../utils/typography"
@@ -114,11 +112,7 @@ class Layout extends React.Component {
       <>
         <Header location={this.props.location} />
         <main>{children}</main>
-        <footer
-          style={{ fontSize: rhythm(1 / 2), textAlign: "center", opacity: 0.5 }}
-        >
-          Copyright © {new Date().getFullYear()} Geoffrey Wu
-        </footer>
+        <Footer />
       </>
     )
   }

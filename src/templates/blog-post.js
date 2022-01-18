@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    const logo = this.props.data.logo.childImageSharp.fixed
+    const logo = this.props.data.logo.childImageSharp.gatsbyImageData
 
     let projectLink
     if (post.frontmatter.link) {
@@ -125,32 +125,29 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM YYYY")
-        interval
-        description
-        link
-      }
+export const pageQuery = graphql`query BlogPostBySlug($slug: String!) {
+  site {
+    siteMetadata {
+      title
+      author
     }
   }
+  logo: file(absolutePath: {regex: "/gwlogo.png/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 50, height: 50, layout: FIXED)
+    }
+  }
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    id
+    excerpt(pruneLength: 160)
+    html
+    frontmatter {
+      title
+      date(formatString: "MMMM YYYY")
+      interval
+      description
+      link
+    }
+  }
+}
 `

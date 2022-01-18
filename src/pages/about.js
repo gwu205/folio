@@ -17,48 +17,43 @@ class About extends React.Component {
 
 export default About
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        social {
-          mail
-          instagram
-          linkedin
-          github
-        }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      social {
+        mail
+        instagram
+        linkedin
+        github
       }
     }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+  }
+  logo: file(absolutePath: {regex: "/gwlogo.png/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 80, height: 80, layout: FIXED)
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-            tags
-            cover_image {
-              publicURL
-              childImageSharp {
-                fluid {
-                  srcSet
-                }
-              }
+  }
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          description
+          tags
+          cover_image {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
         }
       }
     }
   }
+}
 `
