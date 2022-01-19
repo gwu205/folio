@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-class BlogPostTemplate extends React.Component {
+class JournalPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -34,7 +34,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} logo={logo}>
-        <h1>THIS IS A BLOG POST</h1>
+        <h1>THIS IS A JOURNAL POST</h1>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -124,10 +124,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default JournalPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query JournalPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title
