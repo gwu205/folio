@@ -10,22 +10,22 @@ import { rhythm } from "../utils/typography"
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const linkedin = data.site.siteMetadata.social.linkedin
-    const github = data.site.siteMetadata.social.github
-    const instagram = data.site.siteMetadata.social.instagram
+    // const siteTitle = data.site.siteMetadata.title
+    // const linkedin = data.site.siteMetadata.social.linkedin
+    // const github = data.site.siteMetadata.social.github
+    // const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMarkdownRemark.edges
-    const logo = data.logo.childImageSharp.gatsbyImageData
+    // const logo = data.logo.childImageSharp.gatsbyImageData
 
     return (
       <div className={index}>
         <Layout
           location={this.props.location}
-          title={siteTitle}
-          logo={logo}
-          linkedin={linkedin}
-          github={github}
-          instagram={instagram}
+          // title={siteTitle}
+          // logo={logo}
+          // linkedin={linkedin}
+          // github={github}
+          // instagram={instagram}
         >
           <SEO title="UI/UX Product Designer in Tokyo" />
 
@@ -77,43 +77,31 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
-export const pageQuery = graphql`{
-  site {
-    siteMetadata {
-      title
-      social {
-        mail
-        instagram
-        linkedin
-        github
-      }
-    }
-  }
-  logo: file(absolutePath: {regex: "/gwlogo.png/"}) {
-    childImageSharp {
-      gatsbyImageData(width: 80, height: 80, layout: FIXED)
-    }
-  }
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-    edges {
-      node {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          description
-          tags
-          cover_image {
-            publicURL
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+export const pageQuery = graphql`
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/(/content/journal)/.*.md$/" } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            tags
+            cover_image {
+              publicURL
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
             }
           }
         }
       }
     }
   }
-}
 `
