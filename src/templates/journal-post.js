@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { button } from "./blog-post.module.scss"
 
 import Bio from "../components/bio"
@@ -9,7 +10,7 @@ import { rhythm } from "../utils/typography"
 
 class JournalPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     const logo = this.props.data.logo.childImageSharp.gatsbyImageData
@@ -80,7 +81,9 @@ class JournalPostTemplate extends React.Component {
             </small>
           </header>
           {projectLink}
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </section>
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -139,10 +142,10 @@ export const pageQuery = graphql`
         gatsbyImageData(width: 50, height: 50, layout: FIXED)
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM YYYY")

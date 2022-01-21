@@ -9,11 +9,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const fetchBlog = await graphql(
     `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            fileAbsolutePath: { regex: "/(/content/projects)/.*\\\\.md$/" }
-          }
+          filter: { fileAbsolutePath: { regex: "/(/content/projects)/" } }
         ) {
           edges {
             node {
@@ -35,11 +33,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const fetchJournal = await graphql(
     `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            fileAbsolutePath: { regex: "/(/content/journal)/.*\\\\.md$/" }
-          }
+          filter: { fileAbsolutePath: { regex: "/(/content/journal)/" } }
         ) {
           edges {
             node {
@@ -66,27 +62,9 @@ exports.createPages = async ({ graphql, actions }) => {
     throw fetchJournal.errors
   }
 
-  // Create blog posts pages.
-  const blogPostsData = fetchBlog.data.allMarkdownRemark.edges
-  const journalData = fetchJournal.data.allMarkdownRemark.edges
+  const blogPostsData = fetchBlog.data.allMdx.edges
+  const journalData = fetchJournal.data.allMdx.edges
 
-  // Create journal posts pages
-  // const journalPosts = journal.data
-
-  // posts.forEach((post, index) => {
-  //   const previous = index === posts.length - 1 ? null : posts[index + 1].node
-  //   const next = index === 0 ? null : posts[index - 1].node
-
-  //   createPage({
-  //     path: post.node.fields.slug,
-  //     component: blogPost,
-  //     context: {
-  //       slug: post.node.fields.slug,
-  //       previous,
-  //       next,
-  //     },
-  //   })
-  // })
   const makePages = (data, post, index, template) => {
     const previous = index === data.length - 1 ? null : data[index + 1].node
     const next = index === 0 ? null : data[index - 1].node
@@ -113,7 +91,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

@@ -34,16 +34,19 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               // TODO: update with blog body width
-              maxWidth: 1280,
-              withWebp: true,
-              quality: 100,
+              maxWidth: 1024,
+              // withWebp: true,
+              // quality: 100,
+              linkImagesToOriginal: false,
+              backgroundColor: `transparent`,
             },
           },
           {

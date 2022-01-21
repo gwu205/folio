@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
     // const linkedin = data.site.siteMetadata.social.linkedin
     // const github = data.site.siteMetadata.social.github
     // const instagram = data.site.siteMetadata.social.instagram
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allMdx.edges
     // const logo = data.logo.childImageSharp.gatsbyImageData
 
     return (
@@ -79,9 +79,9 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(
+    allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/(/content/journal)/.*.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(/content/journal)/" } }
     ) {
       edges {
         node {
@@ -89,6 +89,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             title
             description

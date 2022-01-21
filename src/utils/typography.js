@@ -1,8 +1,7 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "16px",
-  baseLineHeight: 1.5,
+  scaleRatio: 6,
   headerFontFamily: [
     "Urbanist",
     "Helvetica Neue",
@@ -12,6 +11,13 @@ const typography = new Typography({
     "sans-serif",
   ],
   bodyFontFamily: ["Urbanist", "sans-serif"],
+  blockMarginBottom: "0.5rem",
+  overrideStyles: () => ({
+    h3: {
+      fontWeight: "normal",
+      lineHeight: 1.4,
+    },
+  }),
 })
 
 // Hot reload typography in development.
