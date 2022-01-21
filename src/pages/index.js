@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import { index, projects } from "./index.module.scss"
 
 import Bio from "../components/bio"
@@ -15,15 +15,15 @@ class BlogIndex extends React.Component {
     // const linkedin = data.site.siteMetadata.social.linkedin
     // const github = data.site.siteMetadata.social.github
     // const instagram = data.site.siteMetadata.social.instagram
-    const posts = data.allMarkdownRemark.edges
-    const selectedPosts = [
-      "Stylehint",
-      "Ikura",
-      "CompanyMD",
-      "Kliq",
-      "Tuple",
-      "Giv",
-    ]
+    const posts = data.allMdx.edges
+    // const selectedPosts = [
+    //   "Stylehint",
+    //   "Ikura",
+    //   "CompanyMD",
+    //   "Kliq",
+    //   "Tuple",
+    //   "Giv",
+    // ]
 
     return (
       <div className={index}>
@@ -42,61 +42,69 @@ class BlogIndex extends React.Component {
           </h1>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
-            if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
-              return (
-                <article key={node.fields.slug}>
-                  <Link to={node.fields.slug}>
-                    <GatsbyImage
-                      image={node.frontmatter.cover_image.childImageSharp.gatsbyImageData}
+            // if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
+            return (
+              <article key={node.fields.slug}>
+                <Link to={node.fields.slug}>
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.cover_image.childImageSharp
+                        .gatsbyImageData
+                    }
+                    style={{
+                      minHeight: 200,
+                    }}
+                  />
+                  <header>
+                    <h3
                       style={{
-                        minHeight: 200,
-                      }} />
-                    <header>
-                      <h3
-                        style={{
-                          marginBottom: rhythm(1 / 4),
-                        }}
-                      >
-                        {title}
-                      </h3>
-                      <small>{node.frontmatter.tags}</small>
-                    </header>
-                  </Link>
-                </article>
-              );
-            }
-            return null
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      {title}
+                    </h3>
+                    <small>{node.frontmatter.tags}</small>
+                  </header>
+                </Link>
+              </article>
+            )
+            // }
+            // return null
           })}
           <Bio />
         </Layout>
       </div>
-    );
+    )
   }
 }
 
 export default BlogIndex
 
-export const pageQuery = graphql`{
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-    edges {
-      node {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          description
-          tags
-          cover_image {
-            publicURL
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+export const pageQuery = graphql`
+  {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/(/content/projects)/" } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            tags
+            cover_image {
+              publicURL
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
             }
           }
         }
       }
     }
   }
-}
 `

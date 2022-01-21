@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { button } from "./blog-post.module.scss"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -9,7 +9,7 @@ import { rhythm } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     const logo = this.props.data.logo.childImageSharp.gatsbyImageData
@@ -134,20 +134,16 @@ export const pageQuery = graphql`
         author
       }
     }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        gatsbyImageData(width: 50, height: 50, layout: FIXED)
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
-        date(formatString: "MMMM YYYY")
+        date(formatString: "YYYY")
         interval
         description
+        tags
         link
       }
     }
