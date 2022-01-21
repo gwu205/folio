@@ -1,0 +1,62 @@
+@import "variables";
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  transition: $transition-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+pre {
+  font-family: unset;
+  font-size: unset;
+  line-height: 1.5;
+}
+
+.h3 {
+  font-size: 2.25rem;
+}
+
+caption {
+  width: 100%;
+  font-style: italic;
+  font-size: 90%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.back {
+  margin: 6rem 0;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.m-5 {
+  margin-bottom: 5rem;
+}
+
+// section span.gatsby-resp-image-wrapper {
+//   width: 90vw;
+//   float: right;
+// }

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Header from "./header"
 import Footer from "./footer"
+import "./global.scss"
 import styles from "./layout.module.scss"
 
 import { rhythm } from "../utils/typography"
