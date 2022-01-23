@@ -1,0 +1,21 @@
+@import "variables";
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .icon,
+  .icon > span {
+    display: contents;
+
+    svg {
+      transition: $transition-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.75;
+      }
+    }
+  }
+}
