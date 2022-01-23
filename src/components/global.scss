@@ -13,6 +13,7 @@ a {
 
   &:hover {
     opacity: 0.8;
+    text-decoration: underline;
   }
 }
 
@@ -20,6 +21,15 @@ pre {
   font-family: unset;
   font-size: unset;
   line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  margin-top: 1.5rem 0 1.5rem 1.5rem;
+
+  li {
+    margin: 1rem 0;
+  }
 }
 
 .h3 {
@@ -44,8 +54,14 @@ caption {
   flex-direction: column;
 }
 
+.section {
+  max-width: 40rem;
+  margin: 2.5rem auto 2.5rem 0;
+}
+
 .back {
   margin: 6rem 0;
+  display: block;
 
   @media screen and (max-width: 768px) {
     text-align: center;
