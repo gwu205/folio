@@ -37,7 +37,6 @@ class BlogPostTemplate extends React.Component {
           >
             {post.body}
           </MDXRenderer>
-          {/* </section> */}
           <footer className="flex flex-col">
             <nav className={nav}>
               <ul>
