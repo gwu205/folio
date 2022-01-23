@@ -6,8 +6,6 @@ import Layout from "../components/layout"
 import Socials from "../components/socials"
 import SEO from "../components/seo"
 
-import tokyo from "../../content/assets/tokyo.png"
-
 class About extends React.Component {
   render() {
     const { data } = this.props
@@ -17,7 +15,7 @@ class About extends React.Component {
       <Layout location={this.props.location}>
         <SEO title="About me" />
         <section className="section">
-          <h1>About</h1>
+          <h2>About</h2>
           <h3>
             <i>Who's this guy?</i> &nbsp;I hear you ask.
           </h3>
@@ -132,6 +130,10 @@ class About extends React.Component {
             to drop a line and get to know each other better,{" "}
             <a href={`mailto:${mail}`} rel="noopener noreferrer">
               send me a message
+            </a>
+            &nbsp;or&nbsp;
+            <a href="https://tinyurl.com/gwu205cv" target="_blank">
+              check out my CV
             </a>
             .
           </p>
