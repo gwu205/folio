@@ -41,10 +41,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // TODO: update with blog body width
               maxWidth: 1024,
               // withWebp: true,
-              // quality: 100,
+              quality: 100,
               linkImagesToOriginal: false,
               backgroundColor: `transparent`,
             },
@@ -52,7 +51,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: `margin-bottom: 1rem`,
             },
           },
           `gatsby-remark-prismjs`,
