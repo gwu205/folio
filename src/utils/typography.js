@@ -11,11 +11,18 @@ const typography = new Typography({
     "sans-serif",
   ],
   bodyFontFamily: ["Urbanist", "sans-serif"],
-  blockMarginBottom: "0.5rem",
+  blockMarginBottom: "0.75rem",
   overrideStyles: () => ({
+    h2: {
+      fontSize: "4.5rem",
+      marginBottom: "2.5rem",
+    },
     h3: {
       fontWeight: "normal",
       lineHeight: 1.4,
+    },
+    h5: {
+      marginBottom: "2.5rem",
     },
   }),
 })

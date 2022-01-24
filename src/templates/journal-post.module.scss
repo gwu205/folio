@@ -1,0 +1,33 @@
+.container {
+  max-width: 712px;
+  margin: 0 auto;
+
+  h2,
+  h3 {
+    margin-top: 4rem;
+  }
+
+  caption {
+    margin-bottom: 2rem;
+  }
+
+  hr {
+    margin: 4rem 0;
+  }
+}
+
+.header {
+  margin-bottom: 5rem;
+
+  .title {
+    margin-bottom: 2rem;
+  }
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+}
