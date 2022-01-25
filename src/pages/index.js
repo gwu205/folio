@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { isMobile } from "react-device-detect"
 import {
   name,
   headline,
@@ -30,16 +31,26 @@ class BlogIndex extends React.Component {
         </h3>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          // if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
           return (
             <article key={node.fields.slug}>
               <Link to={node.fields.slug} className={blogItem}>
-                <GatsbyImage
-                  image={
-                    node.frontmatter.cover_image.childImageSharp.gatsbyImageData
-                  }
-                  className={image}
-                />
+                {isMobile && node.frontmatter.mobile_image ? (
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.mobile_image.childImageSharp
+                        .gatsbyImageData
+                    }
+                    className={image}
+                  />
+                ) : (
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.cover_image.childImageSharp
+                        .gatsbyImageData
+                    }
+                    className={image}
+                  />
+                )}
                 <header className={itemTitle}>
                   <h3>{title}</h3>
                   <h3 className="text-gray">{node.frontmatter.tagline}</h3>
@@ -47,8 +58,6 @@ class BlogIndex extends React.Component {
               </Link>
             </article>
           )
-          // }
-          // return null
         })}
       </Layout>
     )
@@ -74,6 +83,12 @@ export const pageQuery = graphql`
             description
             tagline
             cover_image {
+              publicURL
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
+            }
+            mobile_image {
               publicURL
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

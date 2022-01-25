@@ -132,7 +132,11 @@ class About extends React.Component {
               send me a message
             </a>
             &nbsp;or&nbsp;
-            <a href="https://tinyurl.com/gwu205cv" target="_blank">
+            <a
+              href="https://tinyurl.com/gwu205cv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               check out my CV
             </a>
             .
