@@ -77,7 +77,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM YYYY")
-        interval
         description
         link
       }

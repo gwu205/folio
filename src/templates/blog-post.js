@@ -83,7 +83,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "YYYY")
-        interval
         description
         tags
         link

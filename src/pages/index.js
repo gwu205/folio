@@ -1,79 +1,56 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { index, projects } from "./index.module.scss"
+import {
+  name,
+  headline,
+  tagline,
+  blogItem,
+  image,
+  itemTitle,
+} from "./index.module.scss"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    // const siteTitle = data.site.siteMetadata.title
-    // const linkedin = data.site.siteMetadata.social.linkedin
-    // const github = data.site.siteMetadata.social.github
-    // const instagram = data.site.siteMetadata.social.instagram
     const posts = data.allMdx.edges
-    // const selectedPosts = [
-    //   "Stylehint",
-    //   "Ikura",
-    //   "CompanyMD",
-    //   "Kliq",
-    //   "Tuple",
-    //   "Giv",
-    // ]
 
     return (
-      <div className={index}>
-        <Layout
-          location={this.props.location}
-          // title={siteTitle}
-          // logo={logo}
-          // linkedin={linkedin}
-          // github={github}
-          // instagram={instagram}
-        >
-          <SEO title="Works" />
+      <Layout location={this.props.location}>
+        <SEO title="Works" />
 
-          <h1 className={projects} style={{ width: "100%" }}>
-            Digital Designer
-          </h1>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            // if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
-            return (
-              <article key={node.fields.slug}>
-                <Link to={node.fields.slug}>
-                  <GatsbyImage
-                    image={
-                      node.frontmatter.cover_image.childImageSharp
-                        .gatsbyImageData
-                    }
-                    style={{
-                      minHeight: 200,
-                    }}
-                  />
-                  <header>
-                    <h3
-                      style={{
-                        marginBottom: rhythm(1 / 4),
-                      }}
-                    >
-                      {title}
-                    </h3>
-                    <small>{node.frontmatter.tags}</small>
-                  </header>
-                </Link>
-              </article>
-            )
-            // }
-            // return null
-          })}
-          <Bio />
-        </Layout>
-      </div>
+        <h2 className={name}>Geoffrey Wu</h2>
+        <h1 className={headline}>Digital Designer</h1>
+        <h3 className={tagline}>
+          I’m a UI and branding designer dedicated to building awesome product
+          experiences.
+        </h3>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          // if (selectedPosts.indexOf(node.frontmatter.title) !== -1) {
+          return (
+            <article key={node.fields.slug}>
+              <Link to={node.fields.slug} className={blogItem}>
+                <GatsbyImage
+                  image={
+                    node.frontmatter.cover_image.childImageSharp.gatsbyImageData
+                  }
+                  className={image}
+                />
+                <header className={itemTitle}>
+                  <h3>{title}</h3>
+                  <h3 className="text-gray">{node.frontmatter.tagline}</h3>
+                </header>
+              </Link>
+            </article>
+          )
+          // }
+          // return null
+        })}
+      </Layout>
     )
   }
 }
@@ -95,7 +72,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-            tags
+            tagline
             cover_image {
               publicURL
               childImageSharp {
