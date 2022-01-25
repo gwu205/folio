@@ -8,6 +8,16 @@ main {
 
 h1 {
   word-wrap: normal;
+
+  @media screen and (max-width: 768px) {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
 }
 
 a {
@@ -44,6 +54,7 @@ ul {
 }
 
 caption {
+  display: inline-block;
   width: 100%;
   font-style: italic;
   font-size: 90%;
