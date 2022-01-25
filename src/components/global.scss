@@ -1,0 +1,88 @@
+@import "variables";
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  word-wrap: normal;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  transition: $transition-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+}
+
+pre {
+  font-family: unset;
+  font-size: unset;
+  line-height: 1.5;
+}
+
+ul {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+
+  li {
+    margin: 1rem 0;
+  }
+}
+
+.h3 {
+  font-size: 2.25rem;
+}
+
+.text-gray {
+  color: $dark-2;
+}
+
+caption {
+  width: 100%;
+  font-style: italic;
+  font-size: 90%;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid #fff;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.section {
+  max-width: 40rem;
+  margin: 2.5rem auto 2.5rem 0;
+}
+
+.back {
+  margin: 6rem 0;
+  display: inline-block;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.m-5 {
+  margin-bottom: 5rem;
+}

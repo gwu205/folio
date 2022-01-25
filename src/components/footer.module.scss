@@ -1,0 +1,19 @@
+@import "variables";
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+
+  @media screen and (max-width: 1024px) {
+    padding: 1.5rem;
+  }
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

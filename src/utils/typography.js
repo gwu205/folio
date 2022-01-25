@@ -1,9 +1,31 @@
 import Typography from "typography"
-import lincolnTheme from "typography-theme-lincoln"
 
-lincolnTheme.baseFontSize = '18px'
-
-const typography = new Typography(lincolnTheme)
+const typography = new Typography({
+  scaleRatio: 6,
+  headerFontFamily: [
+    "Urbanist",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
+  bodyFontFamily: ["Urbanist", "sans-serif"],
+  blockMarginBottom: "0.75rem",
+  overrideStyles: () => ({
+    h2: {
+      fontSize: "4.5rem",
+      marginBottom: "2.5rem",
+    },
+    h3: {
+      fontWeight: "normal",
+      lineHeight: 1.4,
+    },
+    h5: {
+      marginBottom: "2.5rem",
+    },
+  }),
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

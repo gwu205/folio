@@ -1,0 +1,57 @@
+---
+title: DEFMC
+date: "2021-02"
+tagline: "Broadcasting public health information"
+description: "Website refresh for a GP in the wake of the COVID-19 pandemic."
+cover_image: "banner.png"
+tags: Website Design, Website Development
+link: https://defmc.com.au
+---
+
+import ProjectInfo from "../../../src/components/project-info"
+
+<figure className={props.responsive}>
+
+![DEFMC website](./banner.png)
+
+</figure>
+
+<section className={`${props.info} ${props.columns}`}>
+
+<ProjectInfo tags={props.frontmatter.tags} date={props.frontmatter.date} link={props.frontmatter.link} />
+
+<div className={props.block}>
+
+### I redesigned and developed a new website for a Family Doctor in Australia to better communicate critical information.
+
+In the wake of the COVID-19 pandemic, the client found it imperative to ensure that visitors to the clinic were aware of testing procedures and had the most up-to-date information available.
+
+</div>
+
+</section>
+
+<div className="m-5">
+
+![DEFMC homepage](./home.png)
+
+</div>
+
+<div className={props.block}>
+
+### In addition to refreshing the design, I rebuilt the site from the ground up - implementing support for news posts/blog, both English and Chinese text and SEO optimisation. This led to a substantial increase in user traffic and organic search hits from the previous site.
+
+![DEFMC user traffic](./graph.png)
+
+</div>
+
+<div className="m-5">
+
+![DEFMC site](./team.png)
+
+<caption><a href={props.frontmatter.link} target="_blank" rel="noopen noreferrer">
+
+Check out the live website here
+
+</a></caption>
+
+</div>

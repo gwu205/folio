@@ -1,0 +1,20 @@
+.banner {
+  max-height: 20rem;
+  min-height: 16rem;
+  width: 95vw;
+  transform: translateX(-50%);
+  margin: 2rem 0 5rem 50%;
+}
+
+.divider {
+  background: #fff;
+  margin: 5rem 0;
+}
+
+.list {
+  margin-bottom: 7.5rem;
+
+  article:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}

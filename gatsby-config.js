@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `UI/UX Designer based in Tokyo`,
+    title: `Geoffrey Wu - Digital Designer`,
     author: `Geoffrey Wu`,
-    description: `Multidisciplinary designer creating awesome product experiences`,
+    description: `Digital designer creating awesome product experiences`,
     siteUrl: `https://geoffreywu.digital/`,
     social: {
       mail: `gwu20510@gmail.com`,
-      instagram: 'geoff.wu',
-      linkedin: 'geoffrey-wu',
-      github: 'gwu205',
+      instagram: "geoff.wu",
+      linkedin: "geoffrey-wu",
+      github: "gwu205",
     },
   },
   plugins: [
@@ -22,24 +22,36 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/journal`,
+        name: `journal`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1008,
+              maxWidth: 1024,
+              // withWebp: true,
+              quality: 100,
+              linkImagesToOriginal: false,
+              backgroundColor: `transparent`,
             },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: `margin-bottom: 1rem`,
             },
           },
           `gatsby-remark-prismjs`,
@@ -48,23 +60,23 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-148436785-1",
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Geoffrey Wu | Works`,
+        name: `Geoffrey Wu | Digital Designer`,
         short_name: `GW`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#F6F5F8`,
         display: `minimal-ui`,
         icon: `content/assets/gwlogo.png`,
       },

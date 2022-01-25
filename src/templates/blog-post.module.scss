@@ -1,20 +1,54 @@
-.button {
-    display: block;
-    width: fit-content;
-    font-family: 'Varela Round',sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.1rem;
-    padding: 8px 0;
-    transition: all 0.25s ease-in;
+.article {
+  padding: 2rem 0;
 
-    &:hover {
-        padding-left: 8px;
-    }
+  .body {
+    max-width: 32rem;
+    margin-left: auto;
+  }
 }
 
-blockquote {
-    font-style: normal;
-    line-height: 175%;
-    font-size: 125%;
+.info {
+  margin-top: 5rem;
+}
+
+.columns {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.block {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-bottom: 5rem;
+}
+
+.responsive span,
+.responsive span img {
+  min-height: 13rem;
+}
+
+.responsive span img {
+  object-fit: cover;
+}
+
+.imgCol > p {
+  display: inline-block;
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: unset;
+  }
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
 }
