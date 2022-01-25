@@ -76,7 +76,7 @@ module.exports = {
         short_name: `GW`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#F6F5F8`,
         display: `minimal-ui`,
         icon: `content/assets/gwlogo.png`,
       },
