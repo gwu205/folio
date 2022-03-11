@@ -20,6 +20,10 @@ h2 {
   }
 }
 
+p a {
+  color: $primary;
+}
+
 a {
   color: unset;
   text-decoration: none;
