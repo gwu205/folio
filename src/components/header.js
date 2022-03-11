@@ -5,6 +5,8 @@ import { container, logo, navigation, active } from "./header.module.scss"
 
 const Header = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
+  const isWorks =
+    location.pathname === rootPath || location.pathname.indexOf("/works") > -1
 
   return (
     <StaticQuery
@@ -32,10 +34,7 @@ const Header = ({ location }) => {
             />
           </Link>
           <nav className={navigation}>
-            <Link
-              className={location.pathname === rootPath && active}
-              to={rootPath}
-            >
+            <Link className={isWorks && active} to={rootPath}>
               Works
             </Link>
             <Link
@@ -45,7 +44,7 @@ const Header = ({ location }) => {
               About
             </Link>
             <Link
-              className={location.pathname === "/journal" && active}
+              className={location.pathname.indexOf("/journal") > -1 && active}
               to={`/journal`}
             >
               Journal
