@@ -1,10 +1,26 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 import { container, header, title, nav } from "./journal-post.module.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const ExternalLink = props => {
+  if (props.href.includes("geoffreywu.digital") || props.href[0] === "/") {
+    return <a href={props.href}>{props.children}</a>
+  }
+  return (
+    <a href={props.href} target="_blank" rel="noopener noreferrer">
+      {props.children}
+    </a>
+  )
+}
+
+const components = {
+  a: ExternalLink,
+}
 
 class JournalPostTemplate extends React.Component {
   render() {
@@ -24,7 +40,9 @@ class JournalPostTemplate extends React.Component {
             <h1>{post.frontmatter.title}</h1>
           </header>
           <section>
-            <MDXRenderer>{post.body}</MDXRenderer>
+            <MDXProvider components={components}>
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </MDXProvider>
           </section>
           <footer>
             <nav className={nav}>
