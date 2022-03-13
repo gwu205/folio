@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 import {
   article,
   info,
@@ -11,8 +12,13 @@ import {
   nav,
 } from "./blog-post.module.scss"
 
+import ProjectInfo from "../components/project-info"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const shortcodes = {
+  ProjectInfo,
+}
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -27,16 +33,18 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article className={article}>
-          <MDXRenderer
-            frontmatter={post.frontmatter}
-            info={info}
-            block={block}
-            responsive={responsive}
-            columns={columns}
-            imgCol={imgCol}
-          >
-            {post.body}
-          </MDXRenderer>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer
+              frontmatter={post.frontmatter}
+              info={info}
+              block={block}
+              responsive={responsive}
+              columns={columns}
+              imgCol={imgCol}
+            >
+              {post.body}
+            </MDXRenderer>
+          </MDXProvider>
           <footer className="flex flex-col">
             <nav className={nav}>
               <ul>

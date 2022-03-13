@@ -1,5 +1,9 @@
 @import "variables";
 
+body {
+  background-color: $bg-base;
+}
+
 main {
   max-width: 64rem;
   margin: 0 auto;
@@ -18,6 +22,10 @@ h2 {
   @media screen and (max-width: 768px) {
     font-size: 4rem;
   }
+}
+
+p a {
+  color: $primary;
 }
 
 a {

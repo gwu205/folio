@@ -1,10 +1,34 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { container, header, title, nav } from "./journal-post.module.scss"
+import { MDXProvider } from "@mdx-js/react"
+import {
+  container,
+  header,
+  title,
+  nav,
+  profile,
+  bio,
+} from "./journal-post.module.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const ExternalLink = props => {
+  if (props.href.includes("geoffreywu.digital") || props.href[0] === "/") {
+    return <a href={props.href}>{props.children}</a>
+  }
+  return (
+    <a href={props.href} target="_blank" rel="noopener noreferrer">
+      {props.children}
+    </a>
+  )
+}
+
+const components = {
+  a: ExternalLink,
+}
 
 class JournalPostTemplate extends React.Component {
   render() {
@@ -24,9 +48,29 @@ class JournalPostTemplate extends React.Component {
             <h1>{post.frontmatter.title}</h1>
           </header>
           <section>
-            <MDXRenderer>{post.body}</MDXRenderer>
+            <MDXProvider components={components}>
+              <MDXRenderer>{post.body}</MDXRenderer>
+            </MDXProvider>
           </section>
           <footer>
+            <hr />
+            <div className={bio}>
+              <StaticImage
+                src="../../content/assets/profile-pic.jpg"
+                alt="Geoffrey Wu"
+                className={profile}
+                placeholder="blurred"
+                width="80"
+                quality={90}
+              />
+              <div>
+                <h4>Geoffrey Wu</h4>
+                <p>
+                  A digital designer and web developer who believes in crafting
+                  ideas through a process-driven approach.
+                </p>
+              </div>
+            </div>
             <nav className={nav}>
               <ul>
                 <li>

@@ -16,7 +16,7 @@ const ProjectInfo = ({ tags, date, link }) => {
       <p>{date}</p>
       {link && (
         <a href={`${link}`} rel="noopen noreferrer" target="_blank">
-          <i>View live project</i>
+          View live project
         </a>
       )}
     </aside>

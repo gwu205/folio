@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "geoffrey-wu-folio",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Portfolio site of Geoffrey Wu, Designer",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Geoffrey Wu",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },

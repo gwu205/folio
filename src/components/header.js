@@ -1,10 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
+import { isMobile } from "react-device-detect"
 import { StaticImage } from "gatsby-plugin-image"
-import { container, logo, navigation, active } from "./header.module.scss"
+import { Mail, MailOpen } from "react-ionicons"
+import { container, logo, navigation, active, mail } from "./header.module.scss"
 
 const Header = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
+  const isWorks =
+    location.pathname === rootPath || location.pathname.indexOf("/works") > -1
+  const [isHovering, setIsHovering] = useState(false)
+  const handleMouseOver = () => {
+    setIsHovering(true)
+  }
+  const handleMouseOut = () => {
+    setIsHovering(false)
+  }
 
   return (
     <StaticQuery
@@ -32,10 +43,7 @@ const Header = ({ location }) => {
             />
           </Link>
           <nav className={navigation}>
-            <Link
-              className={location.pathname === rootPath && active}
-              to={rootPath}
-            >
+            <Link className={isWorks && active} to={rootPath}>
               Works
             </Link>
             <Link
@@ -45,7 +53,7 @@ const Header = ({ location }) => {
               About
             </Link>
             <Link
-              className={location.pathname === "/journal" && active}
+              className={location.pathname.indexOf("/journal") > -1 && active}
               to={`/journal`}
             >
               Journal
@@ -53,8 +61,18 @@ const Header = ({ location }) => {
             <a
               href={`mailto:${data.site.siteMetadata.social.mail}`}
               rel="noopener noreferrer"
+              title="Get in touch"
+              className={isMobile ? "" : mail}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
             >
-              Contact
+              {isMobile ? (
+                "Contact"
+              ) : isHovering ? (
+                <MailOpen width="16px" height="16px" />
+              ) : (
+                <Mail width="16px" height="16px" />
+              )}
             </a>
           </nav>
         </header>
