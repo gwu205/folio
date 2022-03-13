@@ -1,8 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import { container, header, title, nav } from "./journal-post.module.scss"
+import {
+  container,
+  header,
+  title,
+  nav,
+  profile,
+  bio,
+} from "./journal-post.module.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -45,6 +53,24 @@ class JournalPostTemplate extends React.Component {
             </MDXProvider>
           </section>
           <footer>
+            <hr />
+            <div className={bio}>
+              <StaticImage
+                src="../../content/assets/profile-pic.jpg"
+                alt="Geoffrey Wu"
+                className={profile}
+                placeholder="blurred"
+                width="80"
+                quality={90}
+              />
+              <div>
+                <h4>Geoffrey Wu</h4>
+                <p>
+                  A digital designer and web developer who believes in crafting
+                  ideas through a process-driven approach.
+                </p>
+              </div>
+            </div>
             <nav className={nav}>
               <ul>
                 <li>

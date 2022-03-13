@@ -3,18 +3,22 @@
 .socials {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
-  .icon,
-  .icon > span {
-    display: contents;
+  .icon {
+    padding: 0.25rem;
 
-    svg {
-      transition: $transition-in-out;
+    &,
+    > span {
+      display: flex;
 
-      &:hover {
-        transform: scale(1.1);
-        opacity: 0.75;
+      svg {
+        transition: $transition-in-out;
+
+        &:hover {
+          fill: $primary;
+          opacity: 0.75;
+        }
       }
     }
   }
