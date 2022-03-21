@@ -7,15 +7,18 @@ const ProjectInfo = ({ tags, date, link }) => {
       <p>
         <strong>Role</strong>
       </p>
-      <p>
-        <pre>{tags.replaceAll(/, /gi, "\n")}</pre>
-      </p>
+      <pre>{tags.replaceAll(/, /gi, "\n")}</pre>
       <p>
         <strong>Date</strong>
       </p>
       <p>{date}</p>
       {link && (
-        <a href={`${link}`} rel="noopen noreferrer" target="_blank">
+        <a
+          href={`${link}`}
+          rel="noopen noreferrer"
+          target="_blank"
+          title="View live project"
+        >
           View live project
         </a>
       )}
