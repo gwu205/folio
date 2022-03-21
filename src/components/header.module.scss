@@ -20,19 +20,6 @@
     }
   }
 
-  .logo {
-    width: 5rem;
-    transition: $transition-in-out;
-
-    &:hover {
-      transform: scale(0.95);
-    }
-
-    @media screen and (max-width: 720px) {
-      width: 4rem;
-    }
-  }
-
   .navigation {
     display: flex;
     justify-content: center;

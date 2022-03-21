@@ -1,0 +1,17 @@
+@import "variables";
+
+.logo {
+  color: var(--font-color_dark);
+  width: 5rem;
+  height: 5rem;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
