@@ -89,6 +89,10 @@ blockquote {
   border-left: 4px solid #fff;
 }
 
+hr {
+  background: var(--font-color_light);
+}
+
 .absolute {
   position: absolute;
 }
