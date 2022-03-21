@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 .name {
   font-size: 1.5rem;
   font-weight: normal;
@@ -5,8 +7,14 @@
   margin-bottom: 1.5rem;
 }
 
+html[data-theme="dark"] {
+  .headline {
+    background-image: url("../../content/assets/gif-dark.gif");
+  }
+}
+
 .headline {
-  background-image: url("../../content/assets/gif.gif");
+  background-image: url("../../content/assets/gif-light.gif");
   background-size: cover;
   background-position: center;
   color: transparent;
@@ -15,6 +23,7 @@
   -webkit-background-clip: text;
   padding: 1rem 0;
   animation: blur-in 1s ease-out forwards;
+  transition: $transition-in-out;
 }
 
 @keyframes blur-in {
