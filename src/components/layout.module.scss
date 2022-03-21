@@ -1,22 +1,5 @@
 @import "variables";
 
 body {
-  background-color: $bg-base;
-}
-
-.socials {
-  background-image: none;
-  padding: 0 8px;
-  opacity: 0.5;
-  transition: opacity 0.25s ease-in;
-  &:hover {
-    opacity: 1;
-  }
-}
-
-.logo {
-  transition: opacity 0.25s ease-in;
-  &:hover {
-    opacity: 0.75;
-  }
+  background-color: var(--bg-color);
 }

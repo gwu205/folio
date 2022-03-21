@@ -60,7 +60,7 @@ class JournalPostTemplate extends React.Component {
                 alt="Geoffrey Wu"
                 className={profile}
                 placeholder="blurred"
-                width="80"
+                width={80}
                 quality={90}
               />
               <div>
@@ -107,11 +107,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
-      }
-    }
-    logo: file(absolutePath: { regex: "/gwlogo.png/" }) {
-      childImageSharp {
-        gatsbyImageData(width: 50, height: 50, layout: FIXED)
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
