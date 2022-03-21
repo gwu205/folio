@@ -1,7 +1,15 @@
 @import "variables";
 
 body {
-  background-color: $bg-base;
+  transition: $transition-in-out;
+  background-color: var(--bg-color);
+  color: var(--font-color_dark);
+}
+
+html[data-theme="dark"] {
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
 }
 
 main {
@@ -25,7 +33,7 @@ h2 {
 }
 
 p a {
-  color: $primary;
+  color: var(--primary-color);
 }
 
 a {
@@ -58,7 +66,7 @@ ul {
 }
 
 .text-gray {
-  color: $dark-2;
+  color: var(--font-color_light);
 }
 
 caption {

@@ -13,12 +13,13 @@
       display: flex;
 
       svg {
+        fill: var(--font-color_dark);
         transition: $transition-in-out;
+      }
 
-        &:hover {
-          fill: $primary;
-          opacity: 0.75;
-        }
+      &:hover svg {
+        fill: var(--primary-color);
+        opacity: 0.75;
       }
     }
   }

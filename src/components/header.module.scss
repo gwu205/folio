@@ -20,27 +20,22 @@
     }
   }
 
-  .logo {
-    width: 5rem;
-    transition: $transition-in-out;
-
-    &:hover {
-      transform: scale(0.95);
-    }
-
-    @media screen and (max-width: 720px) {
-      width: 4rem;
-    }
-  }
-
   .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
     font-weight: bold;
 
-    a:not(.mail) {
+    @media screen and (max-width: 720px) {
+      gap: 1rem;
+    }
+
+    a {
+      padding: 0.5rem;
+    }
+
+    a:not(.mail, .toggle) {
       position: relative;
       color: unset;
       text-decoration: none;
@@ -50,7 +45,7 @@
         content: "";
         width: 0;
         height: 1px;
-        background: $primary;
+        background: var(--primary-color);
         position: absolute;
         left: 50%;
         bottom: -0.25rem;
@@ -58,7 +53,7 @@
       }
 
       &:hover {
-        color: rgba(0, 0, 0, 0.6);
+        color: var(--font-color_light);
       }
 
       &.active,
@@ -71,15 +66,46 @@
       }
     }
 
-    .mail {
-      padding: 8px;
-
+    .mail,
+    .toggle {
       svg {
+        fill: var(--font-color_dark);
         transition: $transition-in-out;
       }
 
       span {
         display: flex;
+      }
+    }
+
+    .toggle {
+      position: relative;
+
+      ::before {
+        content: "";
+        position: absolute;
+        background: var(--font-color_dark);
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: 50%;
+        transition: all 0.75s cubic-bezier(0.77, 0, 0.18, 1);
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        svg {
+          fill: var(--bg-color);
+        }
+
+        ::before {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
