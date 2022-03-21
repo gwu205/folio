@@ -41,6 +41,7 @@ class BlogIndex extends React.Component {
                         .gatsbyImageData
                     }
                     className={image}
+                    alt={title}
                   />
                 ) : (
                   <GatsbyImage
@@ -49,6 +50,7 @@ class BlogIndex extends React.Component {
                         .gatsbyImageData
                     }
                     className={image}
+                    alt={title}
                   />
                 )}
                 <header className={itemTitle}>
