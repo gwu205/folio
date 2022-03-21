@@ -72,18 +72,20 @@ const Header = ({ location }) => {
             <Logo />
           </Link>
           <nav className={navigation}>
-            <Link className={isWorks && active} to={rootPath}>
+            <Link className={isWorks ? active : undefined} to={rootPath}>
               Works
             </Link>
             <Link
-              className={location.pathname === "/about" && active}
-              to={`/about`}
+              className={location.pathname === "/about/" ? active : undefined}
+              to={`/about/`}
             >
               About
             </Link>
             <Link
-              className={location.pathname.indexOf("/journal") > -1 && active}
-              to={`/journal`}
+              className={
+                location.pathname.indexOf("/journal/") > -1 ? active : undefined
+              }
+              to={`/journal/`}
             >
               Journal
             </Link>
