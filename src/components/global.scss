@@ -69,11 +69,17 @@ ul {
   color: var(--font-color_light);
 }
 
-caption {
+figure p {
+  text-align: center;
+}
+
+figcaption,
+.caption {
   display: inline-block;
   width: 100%;
   font-style: italic;
   font-size: 90%;
+  text-align: center;
 }
 
 blockquote {

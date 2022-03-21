@@ -41,7 +41,7 @@ class About extends React.Component {
           layout="fullWidth"
           quality={90}
         />
-        <caption>Where I live — Tokyo, Japan</caption>
+        <figcaption className="caption">Where I live — Tokyo, Japan</figcaption>
         <section className="section">
           <p>
             <strong>Disciplines</strong>
@@ -98,7 +98,9 @@ class About extends React.Component {
           layout="fullWidth"
           quality={90}
         />
-        <caption>I love snowboarding - that’s me on the left!</caption>
+        <figcaption className="caption">
+          I love snowboarding - that’s me on the left!
+        </figcaption>
         <section className="section">
           <p>
             <strong>Process</strong>
