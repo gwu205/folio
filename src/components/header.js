@@ -11,6 +11,8 @@ import {
   toggle,
 } from "./header.module.scss"
 
+const isBrowser = typeof window !== "undefined"
+
 const Header = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isWorks =
@@ -24,8 +26,11 @@ const Header = ({ location }) => {
     setIsHovering(false)
   }
 
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)")
-    .matches
+  let prefersDarkScheme = false
+  if (isBrowser) {
+    prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+  }
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
