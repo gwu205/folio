@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import {
   article,
+  footer,
   info,
   block,
   responsive,
@@ -45,7 +46,7 @@ class BlogPostTemplate extends React.Component {
               {post.body}
             </MDXRenderer>
           </MDXProvider>
-          <footer className="flex flex-col">
+          <footer className={footer}>
             <nav className={nav}>
               <ul>
                 <li>
