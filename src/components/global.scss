@@ -1,9 +1,12 @@
 @import "variables";
 
 body {
-  transition: $transition-in-out;
   background-color: var(--bg-color);
   color: var(--font-color_dark);
+
+  &.active {
+    transition: background-color 0.75s cubic-bezier(0.08, 0.82, 0.17, 1);
+  }
 }
 
 html[data-theme="dark"] {
@@ -80,6 +83,7 @@ figcaption,
   font-style: italic;
   font-size: 90%;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 blockquote {

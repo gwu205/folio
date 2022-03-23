@@ -33,6 +33,11 @@ const Header = ({ location }) => {
   }
   const [darkMode, setDarkMode] = useState(false)
 
+  const toggleTheme = () => {
+    document.querySelector("body").classList = "active"
+    setDarkMode(!darkMode)
+  }
+
   useEffect(() => {
     const currentTheme = JSON.parse(localStorage.getItem("DARK_MODE"))
     if (currentTheme === null) {
@@ -107,7 +112,7 @@ const Header = ({ location }) => {
             </a>
             <a
               className={toggle}
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={() => toggleTheme()}
               title={darkMode ? "Let there be light!" : "Dim the lights!"}
             >
               <Sunny width="16px" height="16px" />
