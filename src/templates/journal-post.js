@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
+import { LinkOutline } from "react-ionicons"
 import {
   container,
   header,
@@ -10,6 +11,7 @@ import {
   nav,
   profile,
   bio,
+  link,
 } from "./journal-post.module.scss"
 
 import Layout from "../components/layout"
@@ -26,8 +28,25 @@ const ExternalLink = props => {
   )
 }
 
+const Permalink = props => {
+  const id = props.children.replace(/\s/g, "")
+  const copyURL = e => {
+    e.preventDefault()
+    navigator.clipboard.writeText(window.location.href + `#${id}`)
+  }
+  return (
+    <h3 id={id}>
+      {props.children}
+      <a href={`#${id}`} className={link} onClick={copyURL} title="Copy link">
+        <LinkOutline />
+      </a>
+    </h3>
+  )
+}
+
 const components = {
   a: ExternalLink,
+  h3: Permalink,
 }
 
 class JournalPostTemplate extends React.Component {
@@ -89,7 +108,7 @@ class JournalPostTemplate extends React.Component {
                 </li>
               </ul>
             </nav>
-            <Link className="h3 back" to="/journal">
+            <Link className="h3 back" to="/journal/">
               Back
             </Link>
           </footer>
