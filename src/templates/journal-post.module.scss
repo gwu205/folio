@@ -1,3 +1,5 @@
+@import "../components/variables";
+
 .container {
   max-width: 712px;
   margin: 0 auto;
@@ -9,6 +11,22 @@
   h2,
   h3 {
     margin-top: 4rem;
+  }
+
+  h3 {
+    position: relative;
+    display: inline-block;
+
+    &:hover .link {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .link {
+      visibility: hidden;
+      opacity: 0;
+      margin-left: 1rem;
+    }
   }
 
   caption {
