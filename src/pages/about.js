@@ -88,7 +88,8 @@ class About extends React.Component {
           </ul>
           <p>
             If you're interested in learning more about me and my design
-            process, <Link to="/journal">head over to the Journal page :)</Link>
+            process,&nbsp;
+            <Link to="/journal/">head over to the Journal page :)</Link>
           </p>
         </section>
         <StaticImage
