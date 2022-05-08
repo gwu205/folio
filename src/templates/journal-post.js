@@ -20,7 +20,7 @@ import SEO from "../components/seo"
 const ExternalLink = props => {
   if (
     props.href.includes("geoffreywu.digital") ||
-    props.href[0] === "/" || "#"
+    props.href[0] === ("/" || "#")
   ) {
     return <a href={props.href}>{props.children}</a>
   }
