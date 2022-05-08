@@ -65,8 +65,8 @@ class JournalPostTemplate extends React.Component {
         />
         <article className={container}>
           <header className={header}>
-            <h3 className={title}>{post.frontmatter.description}</h3>
-            <h4>{post.frontmatter.date}</h4>
+            <h4 className={title}>{post.frontmatter.description}</h4>
+            <h6>{post.frontmatter.date}</h6>
             <h1>{post.frontmatter.title}</h1>
           </header>
           <section>

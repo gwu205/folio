@@ -1,7 +1,7 @@
 ---
 title: Designing for dark mode
 date: "2022-05"
-description: "How to design a website with dark mode: Part I"
+description: "Adding dark mode — Part I: How to design for dark theme UI"
 ---
 
 _This site now has dark mode_ ☀️ 🌑 <br />
@@ -17,10 +17,11 @@ Part I covers **design considerations and implications of creating a dark mode U
 
 ![Dark mode for macOS](./darkMode-mac.png)
 
-<caption>
-  Dark mode for macOS allows users to auto-switch UI appearance depending on
-  time of day
-</caption>
+<figcaption>
+
+Dark mode for macOS allows users to auto-switch UI appearance depending on time of day
+
+</figcaption>
 
 ### The Dark Side
 
@@ -30,7 +31,7 @@ Having this sleek, **dark UI**, was cool. It turned heads and made others go _"W
 
 ![Monochrome logos for famous brands](./black-logos.jpg)
 
-<caption>Monochrome logos are used by many top brands</caption>
+<figcaption>Monochrome logos are used by many top brands</figcaption>
 
 #### Mystery. Elegance. Intrigue.
 
@@ -42,7 +43,7 @@ Nowadays, dark mode is more or less ubiquitous — driven by the big players in 
 
 ![The Matrix](./The-Matrix.gif)
 
-<caption>Follow the white rabbit.</caption>
+<figcaption>Follow the white rabbit.</figcaption>
 
 ### Dark mode is just better - right?
 
@@ -56,7 +57,7 @@ When done wrong or not properly accounted for in the design, it inevitably falls
 
 ![CRT Display](./crt.webp)
 
-<caption>An old CRT monitor</caption>
+<figcaption>An old CRT monitor</figcaption>
 
 #### Why is it hit-or-miss?
 
@@ -66,11 +67,11 @@ When we look at RGB colour space and more specifically, the now common vast arra
 
 ![OLED display technology](./OLED.jpg)
 
-<caption>
+<figcaption>
 
 Anatomy of an OLED panel — [[Source]](https://tech-society.com/what-is-the-difference-between-lcd-oled-and-amoled-screens-and-what-is-the-best/)
 
-</caption>
+</figcaption>
 
 RGB is **additive** colour space, as opposed to CMYK (used in printing), which is **subtractive** colour space. What this means is that the 'default state' of a screen (ie. when nothing is shown) is black. Adding all available colours will give you white. 
 
@@ -78,11 +79,11 @@ Printing gives you the opposite effect, wherein adding all the colours will get 
 
 ![Additive and subtractive colour](./colourspaces.webp)
 
-<caption>
+<figcaption>
 
 Additive and subtractive colour — [[Source]](https://www.tvtechnology.com/opinions/additive-and-subtractive-color-mixing)
   
-</caption>
+</figcaption>
 
 In modern OLED panels, the screen doesn't have a backlight — this means that blacks are truly black, giving a rich, higher contrast appearance. It's why many dark mode advocates claim it improves battery life; but because of the costly manufacturing process of this type of screen, they're more commonly used in small form factors, such as our smartphones, where we can better appreciate the full colour spectrum.
 
@@ -94,11 +95,11 @@ Additive colour means that the more 'white' in our screens, the brighter the ind
 
 ![Kindle vs iPhone XS Max](./kindle-iphone.jpg)
 
-<caption>
+<figcaption>
 
 Amazon Kindle and iPhone XS Max side-by-side — [[Source]](https://appleinsider.com/articles/18/10/24/amazon-kindle-versus-iphone-xs-max-choosing-the-best-e-book-reader)
   
-</caption>
+</figcaption>
 
 When we observe one of the oldest forms of media: books, and their modern counterpart: ebook readers for that matter, we can start to see some correlation between them and contemporary dark mode.
 
@@ -108,11 +109,11 @@ Technology aside, the result of this process is that the text 'jumps out' from t
 
 ![Iris and pupil in different lighting conditions](./pupil.jpg)
 
-<caption>
+<figcaption>
 
 Iris and pupil in different lighting conditions — [[Source]](https://www.teachoo.com/10493/3033/What-is-the-function-of-Iris-and-Pupil-/category/Concepts/)
 
-</caption>
+</figcaption>
 
 ### Designing for dark UI
 Hopefully the background outlined above gives you some insight on how you should approach designing for a dark theme. Done correctly and the shift between light and dark should be seamless. Here's some further design tips to consider:
@@ -122,11 +123,11 @@ Quite often, dark theme doesn't call for the use of pure black (<span style="dis
 
 ![Black or Grey](./black-or-grey.png)
 
-<caption>
+<figcaption>
 
 Using a grey hue will ease contrast and make for easier reading
 
-</caption>
+</figcaption>
 
 #### 2. Test your designs and check contrast levels
 Make sure you're not straining your users' eyes with high contrast levels and saturated colours. Normally, the effects of bright colours are dulled due to bright surroundings or negative space in a layout — a dark background means colours appear significantly bolder.
@@ -135,22 +136,22 @@ Make sure you're not straining your users' eyes with high contrast levels and sa
 
 ![Colour contrast checker](./colourcontrast.png)
 
-<caption>
+<figcaption>
 
 Use [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to test your designs
 
-</caption>
+</figcaption>
 
 #### 3. Adapt text to dark backgrounds
 You can optionally reduce font weight of your text and increase the letter tracking. This allows the text to "breathe" a little more, reducing the effect of the design feeling cluttered due to large blocks of text on a dark layout. 
 
 ![Bolder vs lighter font](./light-font.png)
 
-<caption>
+<figcaption>
 
 Bolder vs lighter font weight
 
-</caption>
+</figcaption>
 
 #### 4. Adjust shadows and consider elevation
 
@@ -160,11 +161,11 @@ Whereas a default theme uses shadows to express hierarchy and elevation within a
   <source src="dark-elevation.mp4" type="video/mp4" />
 </video>
 
-<caption>
+<figcaption>
 
 [Google's Material Design Reference](https://material.io/design/color/dark-theme.html#properties) has a great breakdown on this topic
 
-</caption>
+</figcaption>
 
 #### 5. Optimise your assets for colour adjustment
 
@@ -187,8 +188,8 @@ In my case:
 
 ![Image optimisation](./images.png)
 
-<caption>
+<figcaption>
 
 Original vs adjusted image
 
-</caption>
+</figcaption>
