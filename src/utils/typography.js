@@ -1,7 +1,8 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  scaleRatio: 6,
+  baseFontSize: 18,
+  scaleRatio: 4,
   headerFontFamily: [
     "Urbanist",
     "Helvetica Neue",
@@ -23,6 +24,9 @@ const typography = new Typography({
     },
     h5: {
       marginBottom: "2.5rem",
+    },
+    p: {
+      marginBottom: "1rem",
     },
   }),
 })
