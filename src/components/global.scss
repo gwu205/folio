@@ -3,7 +3,6 @@
 body {
   background-color: var(--bg-color);
   color: var(--font-color_dark);
-  letter-spacing: 0.03rem;
 
   h1,
   h2,
@@ -17,6 +16,10 @@ body {
 }
 
 html[data-theme="dark"] {
+  body {
+    letter-spacing: 0.03rem;
+  }
+
   h1,
   h2,
   h3 {
