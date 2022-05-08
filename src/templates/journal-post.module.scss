@@ -7,54 +7,51 @@
 
   .header h1 {
     margin-top: 4rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
   }
 
   section {
     margin-bottom: 4rem;
-  }
 
-  h2,
-  h3 {
-    margin-top: 4rem;
-  }
-
-  h3 {
-    position: relative;
-    display: inline-block;
-
-    &:hover .link {
-      visibility: visible;
-      opacity: 1;
+    h2,
+    h3 {
+      margin-top: 4rem;
     }
 
-    .link {
-      svg {
-        color: var(--font-color_dark);
+    h3 {
+      position: relative;
+      display: inline-block;
+
+      &:hover .link {
+        visibility: visible;
+        opacity: 1;
       }
-      visibility: hidden;
-      opacity: 0;
-      margin-left: 1rem;
+
+      .link {
+        svg {
+          color: var(--font-color_dark);
+        }
+        visibility: hidden;
+        opacity: 0;
+        margin-left: 1rem;
+      }
     }
-  }
 
-  h4 {
-    margin-top: 2rem;
-  }
-
-  blockquote {
-    font-size: 1.5rem;
-    border-left-color: var(--font-color_dark);
-
-    sup {
-      font-size: 0.7rem;
+    h4 {
+      margin-top: 2rem;
     }
-  }
 
-  caption {
-    font-style: italic;
-    font-size: 0.9rem;
-    width: 100%;
-    margin-bottom: 2rem;
+    blockquote {
+      font-size: 1.5rem;
+      border-left-color: var(--font-color_dark);
+
+      sup {
+        font-size: 0.7rem;
+      }
+    }
   }
 
   hr {
