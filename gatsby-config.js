@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Geoffrey Wu - Digital Designer`,
+    title: `Geoffrey Wu - Product Designer`,
     author: `Geoffrey Wu`,
-    description: `Digital designer creating awesome product experiences`,
+    description: `A designer creating awesome product experiences`,
     siteUrl: `https://geoffreywu.digital/`,
     social: {
       mail: `gwu20510@gmail.com`,
@@ -72,7 +72,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Geoffrey Wu | Digital Designer`,
+        name: `Geoffrey Wu | Product Designer`,
         short_name: `GW`,
         start_url: `/`,
         background_color: `#ffffff`,

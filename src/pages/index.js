@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
         <SEO title="Works" />
 
         <h2 className={name}>Geoffrey Wu</h2>
-        <h1 className={headline}>Digital Designer</h1>
+        <h1 className={headline}>Product Designer</h1>
         <h3 className={tagline}>
           I’m a UI and branding designer dedicated to building awesome product
           experiences.
