@@ -9,6 +9,7 @@ import {
   active,
   mail,
   toggle,
+  pattern,
 } from "./header.module.scss"
 
 const isBrowser = typeof window !== "undefined"
@@ -73,6 +74,7 @@ const Header = ({ location }) => {
       `}
       render={data => (
         <header className={container}>
+          <div className={pattern} />
           <Link to={`/`}>
             <Logo />
           </Link>
