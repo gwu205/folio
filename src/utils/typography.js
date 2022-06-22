@@ -11,7 +11,7 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Urbanist", "sans-serif"],
+  bodyFontFamily: ["Quicksand", "sans-serif"],
   blockMarginBottom: "0.75rem",
   overrideStyles: () => ({
     h2: {
