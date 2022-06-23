@@ -48,7 +48,7 @@ const Header = ({ location }) => {
     } else {
       setDarkMode(false)
     }
-  }, [])
+  }, [prefersDarkScheme])
 
   useEffect(() => {
     if (darkMode) {
@@ -74,7 +74,7 @@ const Header = ({ location }) => {
       `}
       render={data => (
         <header className={container}>
-          <div className={pattern} />
+          <div className={pattern} aria-hidden="true" />
           <Link to={`/`}>
             <Logo />
           </Link>
@@ -102,7 +102,9 @@ const Header = ({ location }) => {
               title="Get in touch"
               className={isMobile ? "" : mail}
               onMouseOver={handleMouseOver}
+              onFocus={handleMouseOver}
               onMouseOut={handleMouseOut}
+              onBlur={handleMouseOut}
             >
               {isMobile ? (
                 "Contact"
@@ -112,13 +114,16 @@ const Header = ({ location }) => {
                 <Mail width="16px" height="16px" />
               )}
             </a>
-            <a
+            <div
               className={toggle}
               onClick={() => toggleTheme()}
+              onKeyPress={e => e.key === "Enter" && toggleTheme()}
               title={darkMode ? "Let there be light!" : "Dim the lights!"}
+              role="button"
+              tabIndex={0}
             >
               <Sunny width="16px" height="16px" />
-            </a>
+            </div>
           </nav>
         </header>
       )}
