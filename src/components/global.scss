@@ -61,7 +61,8 @@ a {
   transition: $transition-in-out;
 
   &:hover {
-    opacity: 0.8;
+    filter: brightness(0.6);
+    opacity: 0.9;
     text-decoration: underline;
   }
 }
