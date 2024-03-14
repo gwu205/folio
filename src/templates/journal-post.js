@@ -78,12 +78,12 @@ class JournalPostTemplate extends React.Component {
             <hr />
             <div className={bio}>
               <StaticImage
-                src="../../content/assets/profile-pic.jpg"
+                src="../../content/assets/profile-pic.png"
                 alt="Geoffrey Wu"
                 className={profile}
                 placeholder="blurred"
                 width={80}
-                quality={90}
+                quality={100}
               />
               <div>
                 <h4>Geoffrey Wu</h4>

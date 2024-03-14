@@ -5,7 +5,7 @@ module.exports = {
     description: `A designer creating awesome product experiences`,
     siteUrl: `https://geoffreywu.digital/`,
     social: {
-      mail: `gwu20510@gmail.com`,
+      mail: `hello@geoffreywu.digital`,
       instagram: "geoff.wu",
       linkedin: "geoffrey-wu",
       github: "gwu205",
